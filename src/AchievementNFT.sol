@@ -12,9 +12,9 @@ contract AchievementNFT is ERC1155 {
         _baseURI = "https://api.example.com/achievements/";
     }
     
-    function uri(uint256 tokenId) public view override returns (string memory) {
-        return string(abi.encodePacked(_baseURI, tokenId.toString(), ".json"));
-    }
+function uri(uint256 tokenId) public view override returns (string memory) {
+    return string.concat(_baseURI, tokenId.toString(), ".json");
+}
 
     function awardAchievement(
         address to,
