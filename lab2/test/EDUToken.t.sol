@@ -2,7 +2,7 @@
 pragma solidity ^0.8.30;
 import "forge-std/Test.sol";
 import "../src/EDUToken.sol";
-
+import "@openzeppelin/contracts/utils/Strings.sol";
 contract EDUTokenTest is Test {
     EDUToken token;
     address user = makeAddr("user");

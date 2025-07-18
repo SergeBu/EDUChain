@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.30;
 
 import {Test, console} from "forge-std/Test.sol";
 import {Counter} from "../src/Counter.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
 
 contract CounterTest is Test {
     Counter public counter;

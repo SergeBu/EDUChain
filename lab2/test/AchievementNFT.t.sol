@@ -2,7 +2,7 @@
 pragma solidity ^0.8.30;
 
 import {Test} from "forge-std/Test.sol";
-import {Strings} from "@openzeppelin/@openzeppelin/utils/Strings.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
 import {AchievementNFT} from "../src/AchievementNFT.sol";
 import {IERC1155Receiver} from "@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol";
 import {IERC165} from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
