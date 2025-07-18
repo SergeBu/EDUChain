@@ -1,41 +1,35 @@
 name: Foundry CI
 
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+on: [push]
 
 jobs:
-  build:
+  test_labs:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        lab: [lab1, lab2]
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      
       - name: Install Foundry
         run: |
           curl -L https://foundry.paradigm.xyz | bash
           source $HOME/.bashrc
           foundryup
           
-      - name: Install dependencies
-        run: forge install
-        
-      - name: Run tests
-        run: forge test
-        
-      - name: Generate coverage report
+      - name: Setup ${{ matrix.lab }}
         run: |
-          forge coverage --report lcov
-          sudo apt-get install -y lcov
-          genhtml lcov.info --output-dir coverage
+          cd ${{ matrix.lab }}
+          forge install
           
-      - name: Upload coverage report
-        uses: actions/upload-artifact@v3
-        with:
-          name: coverage-report
-          path: coverage
+      - name: Test ${{ matrix.lab }}
+        run: |
+          cd ${{ matrix.lab }}
+          forge test
           
-      - name: Check formatting
-        run: forge fmt --check
+      - name: Check formatting in ${{ matrix.lab }}
+        run: |
+          cd ${{ matrix.lab }}
+          forge fmt --check
