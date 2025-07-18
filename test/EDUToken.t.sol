@@ -24,5 +24,10 @@ contract EDUTokenTest is Test {
         vm.expectRevert("Insufficient stake");
         token.unstake(150);
     }
+	function test_OnlyOwnerCanStake() public {
+    vm.prank(address(0x1)); // Подмена адреса
+    vm.expectRevert("Ownable: caller is not the owner");
+    token.stake(100); // Должен завершиться ошибкой
+}
     // +3 теста (всего 5)...
 }

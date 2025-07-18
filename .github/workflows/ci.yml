@@ -1,0 +1,41 @@
+name: Foundry CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Install Foundry
+        run: |
+          curl -L https://foundry.paradigm.xyz | bash
+          source $HOME/.bashrc
+          foundryup
+          
+      - name: Install dependencies
+        run: forge install
+        
+      - name: Run tests
+        run: forge test
+        
+      - name: Generate coverage report
+        run: |
+          forge coverage --report lcov
+          sudo apt-get install -y lcov
+          genhtml lcov.info --output-dir coverage
+          
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report
+          path: coverage
+          
+      - name: Check formatting
+        run: forge fmt --check
