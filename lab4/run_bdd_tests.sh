@@ -1,38 +1,35 @@
 #!/bin/bash
 set -e
 
-# Запуск Anvil в фоне
+# Запуск Anvil
 anvil > anvil.log 2>&1 &
 ANVIL_PID=$!
 echo "Anvil запущен с PID $ANVIL_PID"
 
-# Ждем инициализации
+# Ожидание инициализации Anvil
 echo "Ожидание запуска Anvil..."
 sleep 5
 
-# Компиляция контрактов
+# Компиляция контрактов с очисткой кэша
 echo "Компиляция контрактов..."
-forge build --offline || { 
-    echo "Ошибка компиляции"; 
-    kill $ANVIL_PID;
-    exit 1; 
+forge clean && forge build --offline || {
+  echo "Ошибка компиляции";
+  kill $ANVIL_PID;
+  exit 1;
 }
 
-# Запуск тестов Cucumber
+# Запуск тестов
 echo "Запуск BDD-тестов..."
-export NETWORK_URL="http://localhost:8545"
-npx cucumber-js features || { 
-        echo "Тесты провалились"; 
-        kill $ANVIL_PID;
-        exit 1; 
-    }
+npx cucumber-js features/educhain_staking.feature \
+  --require-module @babel/register \
+  --require features/step_definitions/educhain_staking_steps.js \
+  --format progress || {
+    echo "Тесты провалились";
+    kill $ANVIL_PID;
+    exit 1;
+  }
 
 # Остановка Anvil
 echo "Остановка Anvil..."
-if kill -0 $ANVIL_PID 2>/dev/null; then
-  kill $ANVIL_PID
-  echo "Anvil остановлен"
-else
-  echo "Anvil уже завершился"
-fi
-  
+kill $ANVIL_PID
+echo "Anvil остановлен"

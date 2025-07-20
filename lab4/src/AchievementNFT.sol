@@ -16,15 +16,11 @@ contract AchievementNFT is ERC1155 {
         return string(abi.encodePacked(_baseURI, tokenId.toString(), ".json"));
     }
 
-    function awardAchievement(
-        address to,
-        uint256 id,
-        uint256 amount
-    ) public {
+    // Исправленное название функции (без русских символов)
+    function awardAchievement(address to, uint256 id, uint256 amount) public {
         _mint(to, id, amount, "");
     }
     
-    // Добавьте эту функцию для изменения базового URI
     function setBaseURI(string memory newBaseURI) public {
         _baseURI = newBaseURI;
     }

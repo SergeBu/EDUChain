@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.30;
-import "@openzeppelin/contracts/utils/Strings.sol";
+pragma solidity ^0.8.13;
+
 contract Counter {
     uint256 public number;
 
