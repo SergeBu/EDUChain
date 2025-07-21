@@ -1,17 +1,17 @@
-pragma solidity ^0.8.20;
-import "./interfaces/AggregatorV3Interface.sol"; // Убрать лишние кавычки
+pragma solidity ^0.8.30;
+import "./interfaces/AggregatorV3Interface.sol";
 
-contract EDUOracle {
+contract Oracle {
     AggregatorV3Interface internal priceFeed;
-    address public admin;
+    uint256 public lastPrediction;
     
     constructor(address _priceFeed) {
         priceFeed = AggregatorV3Interface(_priceFeed);
-        admin = msg.sender;
     }
-
-    function getPredictedPrice() external view returns (int) {
-        (, int price, , , ) = priceFeed.latestRoundData();
-        return price * 2; // Упрощенная ML-логика
+    
+    function predictEDUPrice() public {
+        (, int256 price,,,) = priceFeed.latestRoundData();
+        // Your prediction logic here
+        lastPrediction = uint256(price) * 15 / 10; // Example: 1.5x the price
     }
 }

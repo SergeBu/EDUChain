@@ -1,7 +1,7 @@
 // PriceFeed.sol
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.30;
 
-import "@chainlink/src/v0.8/interfaces/AggregatorV3Interface.sol";
+import "./interfaces/AggregatorV3Interface.sol";
 
 contract PriceFeed {
     AggregatorV3Interface internal priceFeed;

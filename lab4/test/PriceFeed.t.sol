@@ -1,47 +1,55 @@
 // test/PriceFeed.t.sol
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.30;
 
-import "forge-std/Test.sol";
-import "../src/PriceFeed.sol";
+import {Test} from "forge-std/Test.sol";
+import {PriceFeed} from "../src/PriceFeed.sol";
 
-contract MockPriceFeed is AggregatorV3Interface {
-    int public price;
-    uint8 public decimals;
-    string public description;
+contract MockAggregator {
+    int private price;
+    bool public shouldRevert;
+    
+    constructor(int _initialPrice) {
+        price = _initialPrice;
+    }
     
     function setPrice(int _price) public {
         price = _price;
     }
     
-    function latestRoundData() external view returns (
-        uint80 roundId,
-        int answer,
-        uint startedAt,
-        uint updatedAt,
-        uint80 answeredInRound
-    ) {
-        return (0, price, 0, 0, 0);
+    // Добавлена функция для установки флага ошибки
+    function setShouldRevert(bool _revert) public {
+        shouldRevert = _revert;
     }
     
-    // Остальные методы интерфейса...
+    function latestRoundData() external view returns (uint80, int, uint, uint, uint80) {
+        if (shouldRevert) revert("Oracle error");
+        return (0, price, 0, 0, 0);
+    }
 }
 
 contract PriceFeedTest is Test {
     PriceFeed priceFeed;
-    MockPriceFeed mockOracle;
+    MockAggregator mockAggregator;
     
     function setUp() public {
-        mockOracle = new MockPriceFeed();
-        priceFeed = new PriceFeed(address(mockOracle));
+        mockAggregator = new MockAggregator(100 * 1e8); // $100
+        priceFeed = new PriceFeed(address(mockAggregator));
     }
     
-    function testGetEDUPrice() public {
-        // Устанавливаем ожидаемое значение
-        int expectedPrice = 250 * 10**8; // $250 с 8 знаками
-        mockOracle.setPrice(expectedPrice);
-        
-        // Проверяем
-        int actualPrice = priceFeed.getEDUPrice();
-        assertEq(actualPrice, expectedPrice);
+    function test_getEDUPrice() public view {
+        int price = priceFeed.getEDUPrice();
+        assertEq(price, 100 * 1e8, "Should return correct price");
+    }
+    
+    function test_priceUpdate() public {
+        mockAggregator.setPrice(150 * 1e8); // $150
+        assertEq(priceFeed.getEDUPrice(), 150 * 1e8, "Should update price");
+    }
+    
+    function test_oracleFailure() public {
+        // Используем правильное имя функции
+        mockAggregator.setShouldRevert(true);
+        vm.expectRevert();
+        priceFeed.getEDUPrice();
     }
 }

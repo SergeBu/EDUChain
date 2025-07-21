@@ -36,7 +36,7 @@ contract AchievementNFTTest is Test {
         assertEq(tokenURI, expectedURI);
     }
 
-    function testURI_Format() public {
+    function testURI_Format() public view {
         string memory baseURI = "https://api.example.com/achievements/";
         string memory expectedURI = string(abi.encodePacked(baseURI, tokenId.toString(), ".json"));
         
