@@ -13,3 +13,9 @@
 [submodule "lab4/lib/chainlink"]
 	path = lab4/lib/chainlink
 	url = https://github.com/smartcontractkit/chainlink
+[submodule "lab5/lib/forge-std"]
+	path = lab5/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "lab5/lib/openzeppelin-contracts"]
+	path = lab5/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts

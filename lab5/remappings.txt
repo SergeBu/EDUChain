@@ -5,3 +5,4 @@ halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/
 @openzeppelin-contracts/=lib/openzeppelin-contracts/
 @chainlink/=lib/chainlink/contracts/
 
+@chainlink/=lib/chainlink/contracts
