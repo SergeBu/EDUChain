@@ -1,0 +1,29 @@
+FROM ubuntu:22.04 AS builder
+
+# Устанавливаем зависимости для сборки
+RUN apt-get update && apt-get install -y wget
+
+# Скачиваем и распаковываем IPFS
+RUN wget https://github.com/ipfs/kubo/releases/download/v0.19.0/kubo_v0.19.0_linux-amd64.tar.gz && \
+    tar -xzf kubo_v0.19.0_linux-amd64.tar.gz
+
+FROM ubuntu:22.04
+
+# Копируем бинарник и его зависимости
+COPY --from=builder kubo/ipfs /usr/local/bin/ipfs
+
+# Устанавливаем необходимые библиотеки
+RUN apt-get update && apt-get install -y \
+    libc6 \
+    libgcc-s1 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Создаем структуру директорий
+RUN mkdir -p /data/ipfs /export
+
+# Настройка портов и томов
+VOLUME /data/ipfs /export
+EXPOSE 4001 5001 8080
+
+# Команда запуска
+ENTRYPOINT ["/usr/local/bin/ipfs", "daemon", "--init"]

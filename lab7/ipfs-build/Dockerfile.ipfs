@@ -1,0 +1,29 @@
+FROM scratch
+
+# Копируем BusyBox как минимальную оболочку
+COPY --chmod=0755 busybox /bin/busybox
+COPY --chmod=0755 busybox /bin/sh
+
+# Создаем минимальную файловую систему
+COPY <<EOS /etc/passwd
+root:x:0:0:root:/root:/bin/sh
+EOS
+
+COPY <<EOS /etc/group
+root:x:0:
+EOS
+
+# Копируем IPFS бинарник
+COPY --chmod=0755 kubo/ipfs /usr/local/bin/ipfs
+
+# Создаем структуру директорий
+RUN ["/bin/busybox", "mkdir", "-p", "/data/ipfs", "/export"]
+
+# Точки монтирования
+VOLUME /data/ipfs /export
+
+# Портs
+EXPOSE 4001 5001 8080
+
+# Команда запуска
+ENTRYPOINT ["/usr/local/bin/ipfs", "daemon", "--init"]
