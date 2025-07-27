@@ -25,4 +25,5 @@ describe('IPFS Service', () => {
     expect(mockStrings.strings).toHaveBeenCalled();
     expect(mockStrings.strings().add).toHaveBeenCalledWith('test data');
   });
+  
 });

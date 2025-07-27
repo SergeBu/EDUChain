@@ -4,8 +4,11 @@
     "@babel/preset-env": "^7.23.0",
     "@babel/register": "^7.22.0",
     "@cucumber/cucumber": "^9.5.1",
+    "axios-mock-adapter": "^2.1.0",
     "chai": "^4.3.7",
-    "ethers": "^6.15.0"
+    "ethers": "^6.15.0",
+    "jest-mock-extended": "^4.0.0",
+    "sinon": "^21.0.0"
   },
   "dependencies": {
     "glob": "^11.0.3",

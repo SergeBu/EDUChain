@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  ipfs:
+    image: ipfs/go-ipfs:v0.19.0
+    ports: ["5001:5001"]
+  anvil:
+    image: ghcr.io/foundry-rs/foundry
+    command: anvil --host 0.0.0.0
+    ports: ["8545:8545"]
