@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  ipfs-node:
+    image: ipfs/go-ipfs:v0.19.0
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./ipfs-staging:/export
+      - ./ipfs-data:/data/ipfs
+    networks:
+      - edu-chain
+
+  anvil-node:
+    image: ghcr.io/foundry-rs/foundry:latest
+    command: anvil --host 0.0.0.0
+    ports:
+      - "8545:8545"
+    networks:
+      - edu-chain
+
+networks:
+  edu-chain:
+    driver: bridge

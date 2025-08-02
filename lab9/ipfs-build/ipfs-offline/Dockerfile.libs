@@ -1,0 +1,11 @@
+FROM scratch
+
+# Копируем минимальную файловую систему
+COPY libs/ /lib/x86_64-linux-gnu/
+COPY libs/ld-linux-x86-64.so.2 /lib64/
+
+# Копируем IPFS
+COPY kubo/ipfs /usr/local/bin/ipfs
+RUN chmod +x /usr/local/bin/ipfs
+
+# Остальные настройки...

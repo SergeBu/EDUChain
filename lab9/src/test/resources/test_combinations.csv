@@ -1,0 +1,10 @@
+Role	Action	Amount
+Professor	Transfer	10
+Student	Burn	10
+Student	Transfer	1000
+Professor	Burn	1000
+Professor	Mint	100
+Student	Transfer	100
+Student	Burn	100
+Student	Mint	10
+Professor	Mint	1000
