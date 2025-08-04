@@ -1,0 +1,1094 @@
+ 1093  npx hardhat clean
+ 1094  npx hardhat compile
+ 1095  npx hardhat clean  # Удаляет артефакты и кэш
+ 1096  rm -rf .cache      # Для Linux/macOS
+ 1097  rmdir /s /q .cache # Для Windows
+ 1098  echo $SOLC_VERSION  # Linux/macOS
+ 1099  echo %SOLC_VERSION% # Windows
+ 1100  echo $SOLC_VERSION
+ 1101  npm update hardhat @nomicfoundation/hardhat-toolbox
+ 1102  node debug-compile.js
+ 1103  SOLC_PATH=./node_modules/solc/soljson.js npx hardhat compile
+ 1104  ls ./node_modules/solc/soljson.js
+ 1105  SOLC_PATH=./node_modules/solc/soljson.js npx hardhat compile
+ 1106  SOLC_PATH=$(pwd)/node_modules/solc/soljson.js npx hardhat compile
+ 1107  chmod +x node_modules/solc/soljson.js
+ 1108  ls -l node_modules/solc/soljson.js
+ 1109  cp node_modules/solc/soljson.js ./local-soljson.js
+ 1110  node node_modules/solc/soljson.js --version
+ 1111  npm uninstall solc
+ 1112  node -e "console.log(require('solc').version())"
+ 1113  node node_modules/solc/soljson.js --version
+ 1114  npx hardhat compile
+ 1115  npm run compile
+ 1116  touch scripts/custom-compile.js
+ 1117  node scripts/custom-compile.js
+ 1118  npx hardhat clean
+ 1119  rm -rf ~/.cache/hardhat-nodejs/compilers/*
+ 1120  # Убедитесь, что нет глобальных переменных
+ 1121  unset SOLC_DIR
+ 1122  unset SOLC_VERSION
+ 1123  # Или явно установите нужные
+ 1124  export SOLC_VERSION=0.8.20
+ 1125  npm install hardhat@latest --force
+ 1126  node scripts/custom-compile.js
+ 1127  npm run compile
+ 1128  touch force-local-compile.js
+ 1129  node scripts/force-local-compile.js
+ 1130  node scripts/offline-compile.js
+ 1131  node scripts/custom-compile.js
+ 1132  npm install patch-package --save-dev
+ 1133  npx patch-package @nomicfoundation/hardhat-toolbox
+ 1134  node scripts/custom-compile.js
+ 1135  rm -rf node_modules package-lock.json .cache artifacts
+ 1136  npm install
+ 1137  docker run -it --rm -v $(pwd):/app node:18 /bin/bash -c "cd /app && npm install && node scripts/force-local-compile.js"
+ 1138  touch force-local-compile.js
+ 1139  node force-local-compile.js
+ 1140  npm uninstall solc
+ 1141  npm install solc@0.8.20 --save-dev --exact
+ 1142  HARDHAT_NETWORK=localhost node force-local-compile.js
+ 1143  npm install --save-dev hardhat@2.22.0 solc@0.8.20 ethers@5.7.2 @nomicfoundation/hardhat-toolbox@3.0.0
+ 1144  npm uninstall ethers
+ 1145  npm install --save-dev hardhat@2.22.0
+ 1146  npm install --save-dev @nomicfoundation/hardhat-toolbox@3.0.0
+ 1147  npm install --save-dev ethers@6.14.0
+ 1148  npm install --save-dev solc@0.8.20
+ 1149  npm install --save-dev solidity-coverage
+ 1150  npm install --save-dev hardhat@2.22.0
+ 1151  npm install --save-dev @nomicfoundation/hardhat-toolbox@2.0.2  # Версия, совместимая с ethers v5
+ 1152  npm install --save-dev ethers@5.7.2
+ 1153  npm install --save-dev solc@0.8.20
+ 1154  npm install --save-dev solidity-coverage
+ 1155  npm uninstall ethers
+ 1156  npm install --save-dev hardhat@2.22.0
+ 1157  npm install --save-dev @nomicfoundation/hardhat-toolbox@2.0.2  # Версия, совместимая с ethers v5
+ 1158  npm install --save-dev ethers@5.7.2
+ 1159  npm install --save-dev solc@0.8.20
+ 1160  npm install --save-dev solidity-coverage
+ 1161  npm list ethers
+ 1162  npm uninstall @nomicfoundation/hardhat-toolbox
+ 1163  npm install --save-dev @nomicfoundation/hardhat-chai-matchers
+ 1164  npm install --save-dev @nomicfoundation/hardhat-ethers
+ 1165  npm install --save-dev @nomicfoundation/hardhat-network-helpers
+ 1166  npm uninstall @nomicfoundation/hardhat-toolbox
+ 1167  # Создание папки проекта
+ 1168  mkdir blockchain-project
+ 1169  cd blockchain-project
+ 1170  # Инициализация npm-проекта
+ 1171  npm init -y
+ 1172  # Установка Hardhat и зависимостей
+ 1173  npm install --save-dev hardhat
+ 1174  npm install --save-dev @nomicfoundation/hardhat-toolbox
+ 1175  npm install --save-dev solidity-coverage
+ 1176  npm install @openzeppelin/contracts
+ 1177  npm ls inflight
+ 1178  npm view inflight versionsinflight
+ 1179  npm view inflight versions
+ 1180  npm install glob@latest
+ 1181  npm view glob versions
+ 1182  npm ls inflight
+ 1183  npm install --save-dev hardhat
+ 1184  npm audit
+ 1185  npm update
+ 1186  npm audit
+ 1187  npm install glob@latest
+ 1188  npm update
+ 1189  npm audit
+ 1190  npm install cookie@latest
+ 1191  npm audit
+ 1192  npm update lodash
+ 1193  npm update cookie
+ 1194  npm list cookie
+ 1195  npm 
+ 1196  npm update hardhat
+ 1197  npm list  hardhat
+ 1198  npx hardhat init
+ 1199  npx hardhat node
+ 1200  mkdir my-wave-portal
+ 1201  cd my-wave-portal
+ 1202  npm init -y
+ 1203  npm install --save-dev hardhat
+ 1204  npx hardhat
+ 1205  npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
+ 1206  npx hardhat init
+ 1207  npx hardhat --version
+ 1208  sudo apt remove code
+ 1209  sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+ 1210  sudo apt update
+ 1211  sudo apt install code
+ 1212  snap install code
+ 1213  sudo snap install code --classic
+ 1214  node --version
+ 1215  git --version
+ 1216  npm init -y
+ 1217  npm install --save-dev hardhat
+ 1218  npm install --save-dev @nomicfoundation/hardhat-toolbox
+ 1219  npm install --save-dev solidity-coverage
+ 1220  npm install @openzeppelin/contracts
+ 1221  npx hardhat init
+ 1222  ls
+ 1223  npx hardhat node
+ 1224  cd ..
+ 1225  mkdir blockchain-lab
+ 1226  cd blockchain-lab
+ 1227  npm init -y
+ 1228  npm install --save-dev hardhat
+ 1229  npm install --save-dev @nomicfoundation/hardhat-toolbox
+ 1230  npm install @openzeppelin/contracts
+ 1231  npx hardhat init
+ 1232  npx hardhat node
+ 1233  cd..
+ 1234  cd ..
+ 1235  ls
+ 1236  npx hardhat run --network localhost scripts/deploy.js
+ 1237  mkdir scripts
+ 1238  touch scripts/deploy.js
+ 1239  mkdir contracts
+ 1240  echo '// SPDX-License-Identifier: MIT
+ 1241  pragma solidity ^0.8.20;
+ 1242  contract SimpleStorage {
+ 1243      uint256 public value;
+ 1244      
+ 1245      function setValue(uint256 _value) public {
+ 1246          value = _value;
+ 1247      }
+ 1248  }' > contracts/SimpleStorage.sol
+ 1249  npx hardhat compile
+ 1250  sudo chown -R $USER /Users/$USER/Library/Caches/hardhat-nodejs
+ 1251  npx hardhat --show-stack-traces --verbose compile
+ 1252  npx hardhat compile
+ 1253  ping https://hardhat.org/
+ 1254  ping hardhat.org
+ 1255  npx hardhat compile
+ 1256  ping hardhat.org
+ 1257  npx hardhat compile
+ 1258  npx hardhat node
+ 1259  npx hardhat compile
+ 1260  # Установка
+ 1261  curl -L https://foundry.paradigm.xyz | bash
+ 1262  foundryup
+ 1263  # Инициализация проекта
+ 1264  forge init edu_project && cd edu_project
+ 1265  source /home/serge/.bashrc
+ 1266  echo 'alias foundryup="PATH=$PATH:$HOME/.foundry/bin foundryup"' >> ~/.bashrc
+ 1267  echo 'alias forge="PATH=$PATH:$HOME/.foundry/bin forge"' >> ~/.bashrc
+ 1268  echo 'alias anvil="PATH=$PATH:$HOME/.foundry/bin anvil"' >> ~/.bashrc
+ 1269  source ~/.bashrc
+ 1270  echo 'alias foundryup="PATH=$PATH:$HOME/.foundry/bin foundryup"' >> ~/.bashrc
+ 1271  echo 'alias forge="PATH=$PATH:$HOME/.foundry/bin forge"' >> ~/.bashrc
+ 1272  echo 'alias anvil="PATH=$PATH:$HOME/.foundry/bin anvil"' >> ~/.bashrc
+ 1273  source ~/.bashrc
+ 1274  cast balance 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+ 1275  // test/EDUToken.t.sol
+ 1276  pragma solidity ^0.8.20;
+ 1277  import "forge-std/Test.sol";
+ 1278  import "../src/EDUToken.sol";
+ 1279  contract EDUTokenTest is Test {
+ 1280  }
+ 1281  cd blockchain-lab
+ 1282  cast balance 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+ 1283  forge test
+ 1284  ~/.foundry/bin/forge test
+ 1285  # Добавьте Foundry в PATH
+ 1286  echo 'export PATH="$HOME/.foundry/bin:$PATH"' >> ~/.bashrc
+ 1287  source ~/.bashrc
+ 1288  # Проверьте приоритет
+ 1289  which forge
+ 1290  # Должно вернуть: /home/ваш-пользователь/.foundry/bin/forge
+ 1291  foundry test
+ 1292  cd ..
+ 1293  foundry test
+ 1294  mv ~/.foundry/bin/forge ~/.foundry/bin/foundry
+ 1295  alias forge=foundry  # Добавьте в .bashrc для постоянства
+ 1296  foundry test
+ 1297  cd blockchain-lab
+ 1298  foundry test
+ 1299  source /home/serge/.bashrc
+ 1300  foundryup
+ 1301  mkdir blockchain-lab
+ 1302  cd blockchain-lab
+ 1303  forge init
+ 1304  # Создадим псевдоним для Foundry
+ 1305  curl -L https://foundry.paradigm.xyz | bash
+ 1306  echo 'alias foundryup="PATH=$PATH:$HOME/.foundry/bin foundryup"' >> ~/.bashrc
+ 1307  echo 'alias forge="PATH=$PATH:$HOME/.foundry/bin forge"' >> ~/.bashrc
+ 1308  echo 'alias anvil="PATH=$PATH:$HOME/.foundry/bin anvil"' >> ~/.bashrc
+ 1309  source ~/.bashrc
+ 1310  # Установка Foundry
+ 1311  foundryup
+ 1312  ~/.foundry/bin/forge init
+ 1313  ~/.foundry/bin/forge --version
+ 1314  ~/.foundry/bin/anvil
+ 1315  cd blockchain-lab
+ 1316  foundry --version
+ 1317  anvil
+ 1318  forge script script/DeployEDUToken.s.sol --rpc-url http://localhost:8545 --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 --broadcast
+ 1319  cd blockchain-lab
+ 1320  forge script script/DeployEDUToken.s.sol --rpc-url http://localhost:8545 --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 --broadcast
+ 1321  ~/.foundry/bin/forge script script/DeployEDUToken.s.sol     --rpc-url http://localhost:8545     --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80     --broadcast
+ 1322  curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":1}' http://localhost:8545
+ 1323  forge script DeployMinimal.s.sol --rpc-url http://localhost:8545 --broadcast
+ 1324  curl -X POST -H "Content-Type: application/json"   --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":1}'   http://localhost:8545
+ 1325  forge script DeployMinimal.s.sol --rpc-url http://localhost:8545
+ 1326  ~/.foundry/bin/forge script DeployMinimal.s.sol   --rpc-url http://localhost:8545   --broadcast   -vvvv
+ 1327  ~/.foundry/bin/forge script DeployMinimal.s.sol   --rpc-url http://localhost:8545   -vvvv
+ 1328  ~/.foundry/bin/forge script script/DeployMinimal.s.sol:MinimalScript   --rpc-url http://localhost:8545   --broadcast   -vvvv
+ 1329  ~/.foundry/bin/forge script script/DeployMinimal.s.sol:MinimalScript   --rpc-url http://localhost:8545   --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80   --broadcast   -vvvv
+ 1330  cd blockchain-lab
+ 1331  ~/.foundry/bin/forge script script/DeployMinimal.s.sol:MinimalScript   --rpc-url http://localhost:8545   --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80   --broadcast   -vvvv
+ 1332  ls -la script/DeployMinimal.s.sol
+ 1333  ~/.foundry/bin/forge script /home/serge/blockchain-lab/script/DeployMinimal.s.sol:MinimalScript   --rpc-url http://localhost:8545   --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80   --broadcast   -vvvv
+ 1334  cd blockchain-lab
+ 1335  ~/.foundry/bin/anvil -v --silent
+ 1336  ~/.foundry/bin/anvil -vvv
+ 1337  cd blockchain-lab
+ 1338  cat > /home/serge/blockchain-lab/script/DeployMinimal.s.sol <<EOF
+ 1339  // SPDX-License-Identifier: UNLICENSED
+ 1340  pragma solidity ^0.8.13;
+ 1341  import {Script} from "forge-std/Script";
+ 1342  contract MinimalScript is Script {
+ 1343      function run() external {
+ 1344          // Пустой скрипт - только проверка работы
+ 1345          console.log("Script works!");
+ 1346      }
+ 1347  }
+ 1348  EOF
+ 1349  ~/.foundry/bin/forge script /home/serge/blockchain-lab/script/DeployMinimal.s.sol:MinimalScript -vvv
+ 1350  # Проверим слушает ли Anvil порт
+ 1351  lsof -i :8545
+ 1352  # Проверим подключение
+ 1353  telnet localhost 8545
+ 1354  ~/.foundry/bin/forge script /home/serge/blockchain-lab/script/DeployMinimal.s.sol:MinimalScript   --rpc-url http://localhost:8545   --simulate   -vvvv
+ 1355  ~/.foundry/bin/forge script /home/serge/blockchain-lab/script/DeployMinimal.s.sol:MinimalScript   --rpc-url https://rpc.ankr.com/eth_sepolia   --broadcast   --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80   -vvvv
+ 1356  ~/.foundry/bin/cast send   --rpc-url http://localhost:8545   --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80   --value 0.1ether   0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+ 1357  ~/.foundry/bin/forge script /home/serge/blockchain-lab/script/DeployMinimal.s.sol:MinimalScript -vvv
+ 1358  ~/.foundry/bin/forge --version
+ 1359  strace -f -o /tmp/forge_strace.log ~/.foundry/bin/forge script /home/serge/blockchain-lab/script/DeployMinimal.s.sol:MinimalScript -vvv
+ 1360  # Проверьте компиляцию
+ 1361  ~/.foundry/bin/forge build
+ 1362  # Запустите тесты
+ 1363  ~/.foundry/bin/forge test
+ 1364  ~/.foundry/bin/forge test --offline --use solc:$HOME/.foundry/cache/solc/v0.8.13/solc-v0.8.13
+ 1365  ~/.foundry/bin/forge test --offline --use solc=$HOME/.foundry/cache/solc/v0.8.13/solc-v0.8.13\
+ 1366  cd blockchain-lab
+ 1367  forge script script/DeployEDUToken.s.sol --rpc-url http://localhost:8545 --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 --broadcast
+ 1368  ~/.foundry/bin/forge script script/DeployEDUToken.s.sol --rpc-url http://localhost:8545 --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 --broadcast
+ 1369  cd blockchain-lab
+ 1370  strace -f -o deploy_trace.log ~/.foundry/bin/forge script script/DeployEDUToken.s.sol   --rpc-url http://localhost:8545   --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80   --broadcast   -vvvv
+ 1371  tail -n 50 deploy_trace.log
+ 1372  ~/.foundry/bin/forge script script/DeployEDUToken.s.sol   --rpc-url http://localhost:8545   --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80   --broadcast   --chain-id 31337
+ 1373  ~/.foundry/bin/forge script script/DeployEDUToken.s.sol   --rpc-url http://localhost:8545   --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80   --broadcast   --chain-id 31337   --offline   --use solc:$HOME/.foundry/cache/solc/v0.8.13/solc-v0.8.13
+ 1374  ~/.foundry/bin/forge test --offline --use solc:$HOME/.foundry/cache/solc/v0.8.13/solc-v0.8.13
+ 1375  ~/.foundry/bin/forge install OpenZeppelin/openzeppelin-contracts
+ 1376  ~/.foundry/bin/forge test --offline --use solc:$HOME/.foundry/cache/solc/v0.8.13/solc-v0.8.13
+ 1377  ~/.foundry/bin/forge test --offline --use solc:$HOME/.foundry/cache/solc/v0.8.20/solc-v0.8.20
+ 1378  Error: `solc` /home/serge/.foundry/cache/solc/v0.8.20/solc-v0.8.20 does not exist
+ 1379  ~/.foundry/bin/forge solc:install 0.8.20
+ 1380  ~/.foundry/bin/foundryup --version solc:0.8.20
+ 1381  ~/.foundry/bin/forge --versions
+ 1382  ~/.foundry/bin/forge --version
+ 1383  # Скачайте конкретную версию solc
+ 1384  curl -L https://github.com/ethereum/solidity/releases/download/v0.8.20/solc-static-linux -o ~/.foundry/bin/solc-v0.8.20
+ 1385  # Дайте права на выполнение
+ 1386  chmod +x ~/.foundry/bin/solc-v0.8.20
+ 1387  # Проверьте версию
+ 1388  ~/.foundry/bin/solc-v0.8.20 --version
+ 1389  ~/.foundry/bin/forge test   --use ~/.foundry/bin/solc-v0.8.20   --offline   --lib-paths lib
+ 1390  ~/.foundry/bin/forge install OpenZeppelin/openzeppelin-contracts-upgradeable
+ 1391  echo '@openzeppelin-upgradeable/=lib/openzeppelin-contracts-upgradeable/' >> remappings.txt
+ 1392  ~/.foundry/bin/forge test   --use ~/.foundry/bin/solc-v0.8.20   --offline   --lib-paths lib
+ 1393  ~/.foundry/bin/forge test   --use ~/.foundry/bin/solc-v0.8.20   --offline   --lib-paths lib   -vvv
+ 1394  ~/.foundry/bin/forge test   --use ~/.foundry/bin/solc-v0.8.20   --offline   --lib-paths lib  --match-test testMinStake   -vvv
+ 1395  forge coverage
+ 1396  forge coverage --report lcov
+ 1397  genhtml lcov.info --output-dir coverage
+ 1398  ~/.foundry/bin/forge coverage
+ 1399  ~/.foundry/bin/forge coverage --report lcov
+ 1400  ~/.foundry/bin/forge coverage --use ~/.foundry/bin/solc-v0.8.20 --report lcov
+ 1401  genhtml lcov.info --output-dir coverage
+ 1402  # Для Linux:
+ 1403  xdg-open coverage/index.html
+ 1404  ~/.foundry/bin/forge coverage --report summary
+ 1405  ~/.foundry/bin/forge coverage --use ~/.foundry/bin/solc-v0.8.20 --report summary
+ 1406  ~/.foundry/bin/forge coverage --use ~/.foundry/bin/solc-v0.8.20 --report lcov | grep -B 1 -A 2 "DA:"
+ 1407  ~/.foundry/bin/forge coverage --use ~/.foundry/bin/solc-v0.8.20 --report summary
+ 1408  ~/.foundry/bin/forge coverage --report lcov > lcov.info
+ 1409  grep -C 3 "DA:0" lcov.info  # Покажет непокрытые строки
+ 1410  grep -c "DA:0" lcov.info
+ 1411  ~/.foundry/bin/forge coverage --report summary
+ 1412  ~/.foundry/bin/forge coverage --use ~/.foundry/bin/solc-v0.8.20 --report summary
+ 1413  git add src/ test/ coverage/
+ 1414  git commit -m "Добавлены тесты для увеличения покрытия"
+ 1415  git config user.email "svbu2019@gmail.com"
+ 1416  git config user.name "Serge Bu"
+ 1417  git config --list
+ 1418  git add src/ test/ coverage/
+ 1419  git commit -m "Добавлены тесты для увеличения покрытия"
+ 1420  git config --list
+ 1421  ls -la
+ 1422  ~/.foundry/bin/forge test --offline --use solc=$HOME/.foundry/cache/solc/v0.8.13/solc-v0.8.13
+ 1423  cd blockchain-lab
+ 1424  ~/.foundry/bin/forge test --offline --use solc=$HOME/.foundry/cache/solc/v0.8.13/solc-v0.8.13
+ 1425  ~/.foundry/bin/forge test --offline --use solc:$HOME/.foundry/cache/solc/v0.8.13/solc-v0.8.13
+ 1426  cd ~/blockchain-lab
+ 1427  ~/.foundry/bin/forge init --force
+ 1428  ~/.foundry/bin/forge install foundry-rs/forge-std
+ 1429  ~/.foundry/bin/forge remappings > remappings.txt
+ 1430  tree -L 2 lib/
+ 1431  ls -la lib/forge-std/src/Script.sol
+ 1432  ~/.foundry/bin/forge test --offline --use solc:$HOME/.foundry/cache/solc/v0.8.13/solc-v0.8.13
+ 1433  echo "forge-std/=lib/forge-std/src/" >> remappings.txt
+ 1434  ~/.foundry/bin/forge test --offline --use solc:$HOME/.foundry/cache/solc/v0.8.13/solc-v0.8.13
+ 1435  # Сначала сгенерируйте данные покрытия без отчета
+ 1436  ~/.foundry/bin/forge coverage --offline     --use solc:$HOME/.foundry/cache/solc/v0.8.13/solc-v0.8.13
+ 1437  # Затем сгенерируйте отчет отдельно
+ 1438  ~/.foundry/bin/forge coverage report --report lcov
+ 1439  ~/.foundry/bin/forge coverage report --format lcov > lcov.info
+ 1440  ~/.foundry/bin/forge coverage --offline     --use solc:$HOME/.foundry/cache/solc/v0.8.13/solc-v0.8.13     --ir
+ 1441  # Соберите данные вручную
+ 1442  ~/.foundry/bin/forge coverage --json > coverage.json
+ 1443  # Преобразуйте в LCOV (требуется Node.js)
+ 1444  npm install -g lcov-result-merger
+ 1445  lcov-result-merger coverage.json lcov.info
+ 1446  ~/.foundry/bin/forge coverage report --format lcov > lcov.info
+ 1447  error: unexpected argument '--format' found
+ 1448  ~/.foundry/bin/forge coverage --offline     --use solc:$HOME/.foundry/cache/solc/v0.8.13/solc-v0.8.13     --report lcov
+ 1449  # Отключите LCOV отчет
+ 1450  ~/.foundry/bin/forge coverage --offline     --use solc:$HOME/.foundry/cache/solc/v0.8.13/solc-v0.8.13
+ 1451  # Посмотрите результат в консоли
+ 1452  ~/.foundry/bin/anvil
+ 1453  ~/.foundry/bin/anvil -vvv
+ 1454  forge script script/Deploy.s.sol --rpc-url http://localhost:8545 --broadcast
+ 1455  cd ~/blockchain-lab1
+ 1456  forge script script/Deploy.s.sol --rpc-url http://localhost:8545 --broadcast
+ 1457  forge script script/Deploy.s.sol --use ~/.foundry/bin/solc-v0.8.20 --offline --rpc-url http://localhost:8545 --broadcast
+ 1458  echo ".env" >> .gitignore
+ 1459  forge script script/Deploy.s.sol --use ~/.foundry/bin/solc-v0.8.20 --offline --rpc-url http://localhost:8545 --broadcast
+ 1460  git push
+ 1461  mkdir blockchain-lab1
+ 1462  cd blockchain-lab1
+ 1463  forge init
+ 1464  forge install OpenZeppelin/openzeppelin-contracts
+ 1465  echo '@openzeppelin/=lib/openzeppelin-contracts/' > remappings.txt
+ 1466  forge test
+ 1467  forge test --use ~/.foundry/bin/solc-v0.8.20 --offline --lib-paths lib
+ 1468  forge coverage --report lcov
+ 1469  genhtml lcov.info --output-dir coverage
+ 1470  # Просмотр отчета
+ 1471  firefox coverage/index.html
+ 1472  forge coverage --use ~/.foundry/bin/solc-v0.8.20 --offline --report lcov
+ 1473  genhtml lcov.info --output-dir coverage
+ 1474  firefox coverage/index.html
+ 1475  anvil &
+ 1476  forge script script/Deploy.s.sol --rpc-url http://localhost:8545 --broadcast
+ 1477  cd blockchain-lab1
+ 1478  slither ./src --exclude-informational --checklist 
+ 1479  # Активация Python-окружения 
+ 1480  python -m venv venv 
+ 1481  source venv/bin/activate 
+ 1482  # Установка Slither 
+ 1483  pip install slither-analyzer 
+ 1484  slither ./src --exclude-informational --checklist 
+ 1485  solc --version
+ 1486  cd blockchain-lab1
+ 1487  solc --version
+ 1488  sudo snap install solc
+ 1489  # Установите solc-select
+ 1490  pip3 install solc-select
+ 1491  # Инициализируйте и выберите версию
+ 1492  solc-select install 0.8.20  # Укажите версию из вашего проекта
+ 1493  solc-select use 0.8.20
+ 1494  # Проверьте работу
+ 1495  solc --version
+ 1496  # Активация Python-окружения 
+ 1497  python -m venv venv 
+ 1498  source venv/bin/activate 
+ 1499  # Установка Slither 
+ 1500  pip install slither-analyzer 
+ 1501  pip3 install solc-select
+ 1502  solc-select install 0.8.20  # Укажите версию из вашего проекта
+ 1503  solc-select use 0.8.20
+ 1504  # Установите solc-select
+ 1505  pip3 install solc-select
+ 1506  # Инициализируйте и выберите версию
+ 1507  solc-select install 0.8.20  # Укажите версию из вашего проекта
+ 1508  solc-select use 0.8.20
+ 1509  # Проверьте работу
+ 1510  solc --version
+ 1511  # Проверьте доступные версии solc
+ 1512  solc-select versions
+ 1513  # Проверьте текущую активную версию
+ 1514  solc-select current
+ 1515  sudo add-apt-repository ppa:ethereum/ethereum
+ 1516  sudo apt update
+ 1517  sudo apt install solc
+ 1518  # Установите solc-select
+ 1519  pip3 install solc-select
+ 1520  # Инициализируйте и выберите версию
+ 1521  solc-select install 0.8.20  # Укажите версию из вашего проекта
+ 1522  solc-select use 0.8.20
+ 1523  # Проверьте работу
+ 1524  solc --version
+ 1525  # Перейдите в директорию с установленным solc
+ 1526  cd ~/.solc-select/artifacts/solc-0.8.20/
+ 1527  # Попробуйте запустить бинарник напрямую
+ 1528  ./solc --version
+ 1529  cd ~/.solc-select/artifacts/solc-0.8.20/
+ 1530  cd blockchain-lab1
+ 1531  # Активация Python-окружения 
+ 1532  python -m venv venv 
+ 1533  source venv/bin/activate 
+ 1534  # Установка Slither 
+ 1535  pip install slither-analyzer 
+ 1536  slither ./src --exclude-informational --checklist 
+ 1537  solc --version
+ 1538  # Установите последнюю версию solc
+ 1539  solc-select install latest
+ 1540  # Установите нужную версию (например, 0.8.0)
+ 1541  solc-select use 0.8.0
+ 1542  # Проверьте
+ 1543  solc --version
+ 1544  cd blockchain-lab1
+ 1545  ./solc --version
+ 1546  slither ./src --exclude-informational --checklist 
+ 1547  source venv/bin/activate
+ 1548  ./venv/bin/slither ./src --exclude-informational --checklist
+ 1549  solc --version
+ 1550  # Установите solc-select
+ 1551  pip install solc-select
+ 1552  # Установите конкретную версию solc (например, 0.8.0)
+ 1553  solc-select install 0.8.20
+ 1554  solc-select use 0.8.20
+ 1555  # Проверьте
+ 1556  solc --version
+ 1557  source venv/bin/activate
+ 1558  pip install solc-select
+ 1559  solc-select init
+ 1560  solc-select install 0.8.20
+ 1561  ~/.local/bin/solc-select install 0.8.20
+ 1562  ~/.local/bin/solc-select use 0.8.20
+ 1563  ./venv/bin/slither ./src --solc-version 0.8.20 --exclude-informational --checklist
+ 1564  ./venv/bin/slither ./src --solc $(which solc) --exclude-informational --checklist
+ 1565  cd blockchain-lab1
+ 1566  ./venv/bin/slither ./src --solc-version 0.8.20 --exclude-informational --checklist
+ 1567  slither ./src --exclude-informational --checklist 
+ 1568  ./venv/bin/slither ./src --exclude-informational --checklist 
+ 1569  slither ./src --solc-version 0.8.20 --exclude-informational --checklist 
+ 1570  ./venv/bin/slither src/EDUToken.sol src/AchievementNFT.sol --checklist
+ 1571  pip install mythril
+ 1572  myth analyze src/EDUToken.sol
+ 1573  sudo apt-get update
+ 1574  sudo apt-get install pandoc texlive-latex-base texlive-fonts-recommended texlive-fonts-extra
+ 1575  pandoc report.md -o slither-report.pdf   --pdf-engine=xelatex   -V mainfont="DejaVu Sans"   -V geometry:margin=2cm   -V colorlinks=true
+ 1576  install xelatex
+ 1577  pandoc report.md -o slither-report.pdf
+ 1578  myth analyze src/EDUToken.sol --solv 0.8.20
+ 1579  ./venv/bin/slither src/EDUToken.sol src/AchievementNFT.sol --checklist
+ 1580  npx cucumber-js features/staking.feature
+ 1581  npx cucumber-js features/staking.feature --use ~/.foundry/bin/solc-v0.8.20 --offline
+ 1582  solc --version
+ 1583  cd blockchain-lab1
+ 1584  sudo apt update
+ 1585  sudo apt install solc
+ 1586  solc --version
+ 1587  sudo add-apt-repository ppa:ethereum/ethereum
+ 1588  sudo apt update
+ 1589  sudo apt install solc
+ 1590  which solc
+ 1591  ./venv/bin/slither ./src --solc /usr/bin/solc --exclude-informational --checklist
+ 1592  forge update
+ 1593  forge update openzeppelin-contracts
+ 1594  ./venv/bin/slither ./src --solc-version 0.8.20 --exclude-informational --checklist
+ 1595  ./venv/bin/slither ./src --solc /usr/bin/solc --exclude-informational --checklist
+ 1596  ./venv/bin/slither ./src --solc $(which solc) --exclude-informational --checklist
+ 1597  ./venv/bin/slither ./src --solc-solcs-select 0.8.20 --exclude-informational --checklist
+ 1598  slither ./src --exclude-informational --checklist 
+ 1599  ./venv/bin/slither ./src --exclude-informational --checklist 
+ 1600  forge test --use ~/.foundry/bin/solc-v0.8.20 --offline --lib-paths lib
+ 1601  ./venv/bin/slither ./src --exclude-informational --checklist 
+ 1602  ./venv/bin/slither ./src --exclude-informational --checklist  > report.md 
+ 1603  pandoc report.md -o slither-report.pdf 
+ 1604  ./venv/bin/slither ./src --checklist  > report.md 
+ 1605  ./venv/bin/slither src/EDUToken.sol src/AchievementNFT.sol --checklist
+ 1606  myth analyze src/EDUToken.sol
+ 1607  ./venv/bin/slither src/EDUToken.sol  --checklist
+ 1608  ./venv/bin/slither  src/AchievementNFT.sol --checklist
+ 1609  forge test --use ~/.foundry/bin/solc-v0.8.20 --offline --lib-paths lib
+ 1610  forge test --use ~/.foundry/bin/solc-v0.8.20 --offline --lib-paths lib -vvv
+ 1611  forge coverage --use ~/.foundry/bin/solc-v0.8.20 --offline --report lcov
+ 1612  forge coverage --report lcov
+ 1613  forge coverage --use ~/.foundry/bin/solc-v0.8.20 --offline --report lcov
+ 1614  npm install @cucumber/cucumber
+ 1615  npx cucumber-js features/staking.feature
+ 1616  npm init -y
+ 1617  npm install --save-dev @cucumber/cucumber chai @nomicfoundation/hardhat-network-helpers hardhat
+ 1618  npx hardhat compile
+ 1619  npm uninstall hardhat @nomicfoundation/hardhat-ethers @nomicfoundation/hardhat-network-helpers
+ 1620  anvil
+ 1621  cd blockchain-lab1
+ 1622  solc --version
+ 1623  forge build
+ 1624  forge build  --use ~/.foundry/bin/solc-v0.8.20 --offline
+ 1625  npx cucumber-js features
+ 1626  forge build  --use ~/.foundry/bin/solc-v0.8.20 --offline
+ 1627  npx cucumber-js features
+ 1628  forge build  --use ~/.foundry/bin/solc-v0.8.20 --offline
+ 1629  npx cucumber-js features
+ 1630  npm install --save-dev @nomicfoundation/hardhat-network-helpers
+ 1631  npm install --save-dev @nomicfoundation/hardhat-toolbox
+ 1632  npx cucumber-js features
+ 1633  npm install --save-dev @nomicfoundation/hardhat-toolbox
+ 1634  npm install --save-dev @nomicfoundation/hardhat-toolbox --legacy-peer-deps
+ 1635  npx cucumber-js features
+ 1636  npm install --save-dev   "@nomicfoundation/hardhat-chai-matchers@^2.0.0"   "@nomicfoundation/hardhat-ethers@^3.0.0"   "@nomicfoundation/hardhat-ignition-ethers@^0.15.0"   "@nomicfoundation/hardhat-verify@^2.0.0"   "@typechain/ethers-v6@^0.5.0"   "@typechain/hardhat@^9.0.0"   "@types/chai@^4.2.0"   "@types/mocha@>=9.1.0"   "hardhat-gas-reporter@^2.3.0"   "typechain@^8.3.0"
+ 1637  npm install --save-dev   "@nomicfoundation/hardhat-chai-matchers@^2.0.0"   "@nomicfoundation/hardhat-ethers@^3.0.0"   "@nomicfoundation/hardhat-ignition-ethers@^0.15.0"   "@nomicfoundation/hardhat-verify@^2.0.0"   "@typechain/ethers-v6@^0.5.0"   "@typechain/hardhat@^9.0.0"   "@types/chai@^4.2.0"   "@types/mocha@>=9.1.0"   "hardhat-gas-reporter@^2.3.0"   "typechain@^8.3.0" --legacy-peer-deps
+ 1638  npx cucumber-js features
+ 1639  npm install --save-dev "@nomicfoundation/hardhat-ignition@^0.15.12" "@nomicfoundation/ignition-core@^0.15.12"
+ 1640  npm install --save-dev "@nomicfoundation/hardhat-ignition@^0.15.12" "@nomicfoundation/ignition-core@^0.15.12" --legacy-peer-deps
+ 1641  npx cucumber-js features
+ 1642  npm install --save-dev @foundry-bdd/sdk @cucumber/cucumber
+ 1643  npm install --save-dev @foundry-bdd/sdk @cucumber/cucumber -legacy-peer-deps
+ 1644  npm install --force
+ 1645  chmod +x run_bdd_tests.sh
+ 1646  npm install -g @cucumber/cucumber ethers
+ 1647  npm install
+ 1648  chmod +x run_bdd_tests.sh
+ 1649  ./run_bdd_tests.sh
+ 1650  run_bdd_tests.sh
+ 1651  npm install -g @cucumber/cucumber ethers
+ 1652  sudo npm install -g @cucumber/cucumber ethers
+ 1653  ./run_bdd_tests.sh
+ 1654  ls -la run_bdd_tests.sh
+ 1655  ./run_bdd_tests.sh
+ 1656  echo '#!/bin/bash
+ 1657  set -e
+ 1658  # Запуск Anvil в фоне
+ 1659  anvil > anvil.log 2>&1 &
+ 1660  ANVIL_PID=$!
+ 1661  echo "Anvil запущен с PID $ANVIL_PID"
+ 1662  # Ждем инициализации
+ 1663  sleep 3
+ 1664  # Компиляция контрактов
+ 1665  echo "Компиляция контрактов..."
+ 1666  forge build
+ 1667  # Запуск тестов Cucumber
+ 1668  echo "Запуск BDD-тестов..."
+ 1669  export NETWORK_URL="http://localhost:8545"
+ 1670  npx cucumber-js features
+ 1671  # Остановка Anvil
+ 1672  echo "Остановка Anvil..."
+ 1673  kill $ANVIL_PID' > run_bdd_tests.sh
+ 1674  ./run_bdd_tests.sh
+ 1675  npm install --save-dev chai@4.3.7
+ 1676  ./run_bdd_tests.sh
+ 1677  Anvil запущен с PID 303658
+ 1678  Компиляция контрактов...
+ 1679  Запуск BDD-тестов...
+ 1680  This Node.js version (v20.19.3) has not been tested with this version of Cucumber; it should work normally, but please raise an issue if you see anything unexpected.
+ 1681  ...............F...F....F............U---
+ 1682  Failures:
+ 1683  1) Scenario: Стейкинг нулевого количества токенов (невалидно) # features/staking.feature:24
+ 1684  2) Scenario: Стейкинг превышающий максимальное количество (10,001 токен) # features/staking.feature:30
+ 1685  3) Scenario: Стейкинг при приостановленном контракте # features/staking.feature:36
+ 1686  4) Scenario: Успешный стейкинг валидного количества токенов # features/staking.feature:57
+ 1687  9 scenarios (3 failed, 1 undefined, 5.878s (executing steps: 0m00.852s)
+ 1688  Тесты провалились
+ 1689  run_bdd_tests.sh
+ 1690  ./run_bdd_tests.sh
+ 1691  ls -l artifacts/contracts/EDUToken.sol/EDUToken.json
+ 1692  mkdir -p artifacts/contracts/EDUToken.sol
+ 1693  touch artifacts/contracts/EDUToken.sol/EDUToken.json
+ 1694  ls -l artifacts/contracts/EDUToken.sol/EDUToken.json
+ 1695  ./run_bdd_tests.sh
+ 1696  npx hardhat clean
+ 1697  npx hardhat compile --force
+ 1698  ./run_bdd_tests.sh
+ 1699  forge build
+ 1700  forge build  --use ~/.foundry/bin/solc-v0.8.20 --offline
+ 1701  ./run_bdd_tests.sh
+ 1702  cd blockchain-lab1
+ 1703  # Установка зависимостей
+ 1704  npm install -g lcov
+ 1705  forge install --no-commit fundry-coverage
+ 1706  # Конфигурация foundry.toml
+ 1707  [profile.default]
+ 1708  coverage = true
+ 1709  coverage_reports = ["html", "lcov"]
+ 1710  npm install -g lcov
+ 1711  forge install --no-commit fundry-coverage
+ 1712  npm install --prefix=~/.node_modules lcov
+ 1713  export PATH="$HOME/.node_modules/bin:$PATH"
+ 1714  # 2. Установка foundry-coverage (правильное название)
+ 1715  forge install foundry-coverage
+ 1716  sudo apt-get update && sudo apt-get install -y lcov 
+ 1717  # Проверка версий
+ 1718  forge --version | grep coverage
+ 1719  lcov --version
+ 1720  # Генерация тестового отчета
+ 1721  forge coverage
+ 1722  forge --version | grep coverage --use ~/.foundry/bin/solc-v0.8.20 --offline
+ 1723  forge coverage --use ~/.foundry/bin/solc-v0.8.20 --offline
+ 1724  genhtml lcov.info -o coverage
+ 1725  forge coverage --report html
+ 1726  error: invalid value 'html' for '--report <REPORT>'
+ 1727  For more information, try '--help'.
+ 1728  # Генерируем lcov отчёт
+ 1729  forge coverage --report lcov
+ 1730  # Преобразуем в HTML с игнорированием ошибок
+ 1731  genhtml --ignore-errors source lcov.info -o coverage-report
+ 1732  forge coverage --report lcov --use ~/.foundry/bin/solc-v0.8.20 --offline
+ 1733  genhtml --ignore-errors source lcov.info -o coverage-report
+ 1734  open coverage-report/index.html
+ 1735  forge coverage --report summary --use ~/.foundry/bin/solc-v0.8.20 --offline > coverage-summary.txt
+ 1736  forge coverage --report debug --use ~/.foundry/bin/solc-v0.8.20 --offline > coverage-details.txt
+ 1737  forge coverage --use ~/.foundry/bin/solc-v0.8.20 --offline
+ 1738  forge coverage --report summary --use ~/.foundry/bin/solc-v0.8.20 --offline > coverage-summary.txt
+ 1739  git add .
+ 1740  git commit -m "ЛР4: Достигнуто 100% покрытие кода"
+ 1741  history
+ 1742  forge test --use ~/.foundry/bin/solc-v0.8.20 --offline --lib-paths lib -vvv
+ 1743  ./run_bdd_tests.sh
+ 1744  cd blockchain-lab1
+ 1745  ./run_bdd_tests.sh
+ 1746  rm -rf node_modules
+ 1747  npm install @cucumber/cucumber@latest chai ethers
+ 1748  ./run_bdd_tests.sh
+ 1749  npm install @cucumber/cucumber@latest chai@latest ethers@latest
+ 1750  npx cucumber-js features/staking.feature
+ 1751  ./run_bdd_tests.sh
+ 1752  cat /home/serge/blockchain-lab1/features/staking.feature
+ 1753  ./run_bdd_tests.sh
+ 1754  npx cucumber-js features/staking.feature
+ 1755  sudo apt install filezilla
+ 1756  # Для JS-тестов
+ 1757  npm install -D sinon jest-mock-extended axios-mock-adapter
+ 1758  # Для Solidity-тестов (Foundry)
+ 1759  forge install chainlink/contracts
+ 1760  npx jest blockchainService.test.js
+ 1761  npx jest
+ 1762  npx jest blockchainService.test.js
+ 1763  forge test --use solc:0.8.20 --offline
+ 1764  ~/.foundry/bin/forge test   --use ~/.foundry/bin/solc-v0.8.20   --offline
+ 1765  # Удаляем текущую версию OpenZeppelin
+ 1766  forge remove openzeppelin-contracts
+ 1767  # Устанавливаем версию, совместимую с 0.8.20
+ 1768  forge install openzeppelin/openzeppelin-contracts@v4.9.5
+ 1769  # Обновляем ремаппинг
+ 1770  echo '@openzeppelin/=lib/openzeppelin-contracts/' > remappings.txt
+ 1771  # Запускаем тесты
+ 1772  forge test --use ~/.foundry/bin/solc-v0.8.20 --offline
+ 1773  # 1. Удаляем всю папку с зависимостями
+ 1774  rm -rf lib
+ 1775  # 2. Удаляем конфигурацию Foundry
+ 1776  rm foundry.toml
+ 1777  # 3. Инициализируем проект заново
+ 1778  forge init --force
+ 1779  # 4. Устанавливаем совместимую версию OpenZeppelin
+ 1780  forge install openzeppelin/openzeppelin-contracts@v4.9.5
+ 1781  # 5. Устанавливаем совместимую версию Chainlink
+ 1782  forge install smartcontractkit/chainlink@v0.6.1
+ 1783  # 6. Настраиваем ремаппинги
+ 1784  cat > remappings.txt <<EOF
+ 1785  @openzeppelin/=lib/openzeppelin-contracts/
+ 1786  @chainlink/=lib/chainlink/
+ 1787  EOF
+ 1788  # 7. Создаем конфигурацию Foundry
+ 1789  cat > foundry.toml <<EOF
+ 1790  [profile.default]
+ 1791  src = "src"
+ 1792  out = "out"
+ 1793  libs = ["lib"]
+ 1794  solc_version = "0.8.20"
+ 1795  EOF
+ 1796  # 8. Проверяем установленные зависимости
+ 1797  forge remappings
+ 1798  forge test --use ~/.foundry/bin/solc-v0.8.20 --offline
+ 1799  ls -R lib/chainlink
+ 1800  # Удалите старые ремаппинги
+ 1801  rm remappings.txt
+ 1802  # Создайте новые ремаппинги
+ 1803  echo '@openzeppelin/=lib/openzeppelin-contracts/' > remappings.txt
+ 1804  echo '@chainlink-interfaces/=lib/chainlink/evm/contracts/interfaces/' >> remappings.txt
+ 1805  echo '@chainlink/=lib/chainlink/evm/contracts/' >> remappings.txt
+ 1806  forge test --use ~/.foundry/bin/solc-v0.8.20 --offline
+ 1807  forge remove chainlink
+ 1808  rm -rf lib/chainlink
+ 1809  # Принудительно удаляем папку из Git индекса
+ 1810  git rm -rf --cached lib/chainlink
+ 1811  # Удаляем физическую папку
+ 1812  rm -rf lib/chainlink
+ 1813  # Удаляем зависимость из Foundry
+ 1814  forge remove chainlink
+ 1815  # 1. Удаляем папку с зависимостью вручную
+ 1816  rm -rf lib/chainlink
+ 1817  # 2. Удаляем запись о зависимости из foundry.toml (если есть)
+ 1818  sed -i '/chainlink/d' foundry.toml
+ 1819  # 3. Обновляем ремаппинги
+ 1820  grep -v 'chainlink' remappings.txt > temp.txt && mv temp.txt remappings.txt
+ 1821  # 4. Очищаем кэш Foundry
+ 1822  forge clean
+ 1823  # 1. Вместо forge clean просто удаляем артефакты вручную
+ 1824  rm -rf out
+ 1825  rm -rf cache
+ 1826  # 2. Устанавливаем правильную библиотеку интерфейсов (если ещё не установлена)
+ 1827  # Если у вас есть интернет, выполните:
+ 1828  # forge install smartcontractkit/chainlink-brownie-contracts@0.6.1 --no-commit
+ 1829  # 3. Если нет интернета, создадим интерфейс вручную
+ 1830  mkdir -p src/interfaces
+ 1831  # Создаем файл с интерфейсом AggregatorV3Interface
+ 1832  cat > src/interfaces/AggregatorV3Interface.sol <<EOF
+ 1833  // SPDX-License-Identifier: MIT
+ 1834  pragma solidity ^0.8.0;
+ 1835  interface AggregatorV3Interface {
+ 1836    function decimals() external view returns (uint8);
+ 1837    function description() external view returns (string memory);
+ 1838    function version() external view returns (uint256);
+ 1839    function getRoundData(uint80 _roundId)
+ 1840      external
+ 1841      view
+ 1842      returns (
+ 1843        uint80 roundId,
+ 1844        int256 answer,
+ 1845        uint256 startedAt,
+ 1846        uint256 updatedAt,
+ 1847        uint80 answeredInRound
+ 1848      );
+ 1849    function latestRoundData()
+ 1850      external
+ 1851      view
+ 1852      returns (
+ 1853        uint80 roundId,
+ 1854        int256 answer,
+ 1855        uint256 startedAt,
+ 1856        uint256 updatedAt,
+ 1857        uint80 answeredInRound
+ 1858      );
+ 1859  }
+ 1860  EOF
+ 1861  # 4. Обновляем импорт в Oracle.sol
+ 1862  sed -i 's/@chainlink.*AggregatorV3Interface.sol/".\/interfaces\/AggregatorV3Interface.sol"/' src/Oracle.sol
+ 1863  # 5. Проверяем изменения
+ 1864  grep 'import' src/Oracle.sol
+ 1865  # Должно быть: import "./interfaces/AggregatorV3Interface.sol";
+ 1866  # Компилируем и тестируем без доступа в интернет
+ 1867  forge build --offline
+ 1868  forge test --use ~/.foundry/bin/solc-v0.8.20 --offline -vv
+ 1869  mkdir -p lib/chainlink/contracts/src/v0.8/interfaces
+ 1870  echo "@chainlink/=lib/chainlink/contracts/" >> remappings.txt
+ 1871  forge build --offline
+ 1872  forge test --use ~/.foundry/bin/solc-v0.8.20 --offline -vv
+ 1873  echo "@chainlink/=lib/chainlink/contracts/" > remappings.txt
+ 1874  forge test --use ~/.foundry/bin/solc-v0.8.20 --offline -vv
+ 1875  mkdir -p lib/openzeppelin/contracts/{token/ERC1155,token/ERC721,utils,governance,governance/extensions,access}
+ 1876  echo "@openzeppelin/=lib/openzeppelin/contracts/" > remappings.txt
+ 1877  echo "@chainlink/=lib/chainlink/contracts/" >> remappings.txt
+ 1878  mkdir -p lib/chainlink/contracts/src/v0.8/interfaces
+ 1879  touch lib/openzeppelin/contracts/token/ERC1155/IERC1155.sol
+ 1880  touch lib/openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol
+ 1881  touch lib/openzeppelin/contracts/utils/Address.sol
+ 1882  touch lib/openzeppelin/contracts/utils/Context.sol
+ 1883  touch lib/openzeppelin/contracts/utils/introspection/ERC165.sol
+ 1884  # Создаем недостающие каталоги
+ 1885  mkdir -p lib/openzeppelin/contracts/utils/introspection
+ 1886  # Создаем файлы
+ 1887  touch lib/openzeppelin/contracts/token/ERC1155/IERC1155.sol
+ 1888  touch lib/openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol
+ 1889  touch lib/openzeppelin/contracts/utils/Address.sol
+ 1890  touch lib/openzeppelin/contracts/utils/Context.sol
+ 1891  touch lib/openzeppelin/contracts/utils/introspection/ERC165.sol
+ 1892  touch lib/openzeppelin/contracts/utils/introspection/IERC165.sol
+ 1893  echo "@openzeppelin/=lib/openzeppelin/contracts/" > remappings.txt
+ 1894  echo "@chainlink/=lib/chainlink/contracts/" >> remappings.txt
+ 1895  forge clean
+ 1896  forge build --offline
+ 1897  forge test --offline -vv
+ 1898  forge clean
+ 1899  rm -rf out cache
+ 1900  ~/.foundry/bin/solc-v0.8.20 --version
+ 1901  forge build --offline
+ 1902  forge test --use ~/.foundry/bin/solc-v0.8.20 --offline -vv
+ 1903  forge build --offline
+ 1904  forge build  --use ~/.foundry/bin/solc-v0.8.20 --offline
+ 1905  touch lib/openzeppelin/contracts/governance/extensions/GovernorVotes.sol
+ 1906  forge build  --use ~/.foundry/bin/solc-v0.8.20 --offline
+ 1907  mkdir -p lib/openzeppelin/contracts/access
+ 1908  touch lib/openzeppelin/contracts/access/AccessControl.sol
+ 1909  touch lib/openzeppelin/contracts/access/IAccessControl.sol
+ 1910  touch lib/openzeppelin/contracts/access/Ownable.sol
+ 1911  touch lib/openzeppelin/contracts/utils/Counters.sol
+ 1912  forge build  --use ~/.foundry/bin/solc-v0.8.20 --offline
+ 1913  forge install openzeppelin/openzeppelin-contracts@v4.9.0
+ 1914  forge install openzeppelin/openzeppelin-contracts@v4.9.3
+ 1915  forge build  --use ~/.foundry/bin/solc-v0.8.20 --offline
+ 1916  rm -rf lib/openzeppelin
+ 1917  forge install openzeppelin/openzeppelin-contracts@v4.9.0
+ 1918  echo "@openzeppelin/=lib/openzeppelin-contracts/" > remappings.txt
+ 1919  echo "@chainlink/=lib/chainlink/contracts/" >> remappings.txt
+ 1920  forge install smartcontractkit/chainlink --no-commit
+ 1921  forge install smartcontractkit/chainlink
+ 1922  mkdir blockchain-lab2
+ 1923  cd blockchain-lab2
+ 1924  forge init  # Создает структуру проекта
+ 1925  forge install OpenZeppelin/openzeppelin-contracts
+ 1926  echo '@openzeppelin/=lib/openzeppelin-contracts/' > remappings.txt
+ 1927  cd ..
+ 1928  mkdir blockchain-lab2
+ 1929  cd blockchain-lab2
+ 1930  forge init  # Создает структуру проекта
+ 1931  forge install OpenZeppelin/openzeppelin-contracts
+ 1932  echo '@openzeppelin/=lib/openzeppelin-contracts/' > remappings.txt
+ 1933  touch .env
+ 1934  curl -L https://foundry.paradigm.xyz | bash
+ 1935  source ~/.bashrc
+ 1936  foundryup
+ 1937  cd blockchain-lab2
+ 1938  forge script script/Deploy.s.sol --rpc-url http://localhost:8545 --broadcast --ffi
+ 1939  git init
+ 1940  git add .
+ 1941  git commit -m "Initial commit with Foundry project"
+ 1942  git remote add origin https://github.com/SergeBu/EDUChain.git
+ 1943  git push -u origin main
+ 1944  git branch
+ 1945  # Переименуйте локальную ветку в main
+ 1946  git branch -M main
+ 1947  # Отправьте изменения
+ 1948  git push -u origin main
+ 1949  cd blockchain-lab2
+ 1950  git checkout c0d5540 -- src test script foundry.toml .gitignore .gitmodules README.md lib
+ 1951  mkdir lab1
+ 1952  mv src test script foundry.toml .gitignore .gitmodules README.md lib lab1/
+ 1953  git checkout -b restore-lab1 c0d5540
+ 1954  git stash save "Temporary changes before reorganization"
+ 1955  git checkout -b restore-lab1 c0d5540
+ 1956  mkdir lab1
+ 1957  git mv .github .gitignore .gitmodules README.md coverage foundry.toml lcov.info lib remappings.txt script src test lab1/
+ 1958  git commit -m "Move Lab1 to lab1 folder"
+ 1959  mkdir lab1
+ 1960  git mv .github .gitignore .gitmodules README.md coverage foundry.toml lcov.info lib remappings.txt script src test lab1/
+ 1961  git commit -m "Move Lab1 to lab1 folder"
+ 1962  git checkout main
+ 1963  git checkout restore-lab1 -- lab1
+ 1964  git stash pop
+ 1965  mkdir lab2
+ 1966  # Переместите текущие файлы в lab2
+ 1967  mv src test script foundry.toml lab2/ 2>/dev/null || true
+ 1968  # Если есть другие файлы
+ 1969  mv lib lab2/ 2>/dev/null || true
+ 1970  # Создайте новый .gitignore
+ 1971  cat > .gitignore <<EOL
+**/cache/
+**/out/
+**/coverage/
+.env
+EOL
+
+ 1972  # Создайте новый README.md
+ 1973  cat > README.md <<EOL
+# EDUChain Project
+
+## Лабораторные работы
+- [ЛР1: Базовые контракты](./lab1/README.md)
+- [ЛР2: Расширенные функции](./lab2/README.md)
+EOL
+
+ 1974  # Создайте README для ЛР1
+ 1975  echo "# Лабораторная работа 1" > lab1/README.md
+ 1976  echo "Исходное состояние проекта" >> lab1/README.md
+ 1977  # Создайте README для ЛР2
+ 1978  echo "# Лабораторная работа 2" > lab2/README.md
+ 1979  echo "Расширенные функциональности" >> lab2/README.md
+ 1980  mkdir -p .github/workflows
+ 1981  cat > .github/workflows/ci.yml <<EOL
+name: Foundry CI
+
+on: [push]
+
+jobs:
+  test_labs:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        lab: [lab1, lab2]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      
+      - name: Install Foundry
+        run: |
+          curl -L https://foundry.paradigm.xyz | bash
+          source \$HOME/.bashrc
+          foundryup
+          
+      - name: Setup \${{ matrix.lab }}
+        run: |
+          cd \${{ matrix.lab }}
+          forge install
+          
+      - name: Test \${{ matrix.lab }}
+        run: |
+          cd \${{ matrix.lab }}
+          forge test
+          
+      - name: Check formatting in \${{ matrix.lab }}
+        run: |
+          cd \${{ matrix.lab }}
+          forge fmt --check
+EOL
+
+ 1982  git add .
+ 1983  git add -u
+ 1984  git commit -m "Reorganized project: Lab1 and Lab2 in separate folders"
+ 1985  git push origin main
+ 1986  git remote set-url origin git@github.com:SergeBu/EDUChain.git
+ 1987  git push origin main
+ 1988  ssh-keygen -t ed25519 -C "svbuyanov@mail.ru"
+ 1989  eval "$(ssh-agent -s)"
+ 1990  ssh-add ~/.ssh/id_ed25519  # или ваш ключ
+ 1991  cat ~/.ssh/id_ed25519.pub
+ 1992  cat ~/.ssh/121.pub
+ 1993  ls -la ~/.ssh
+ 1994  ssh-keygen -t ed25519 -C "svbuyanov@mail.ru"
+ 1995  ls -la ~/.ssh
+ 1996  eval "$(ssh-agent -s)"
+ 1997  ssh-add ~/.ssh/id_ed25519  # Теперь файл существует
+ 1998  cat ~/.ssh/id_ed25519.pub | xclip -selection clipboard
+ 1999  ssh -T git@github.com
+ 2000  git push origin main
+ 2001  # Для ЛР1
+ 2002  cd lab1
+ 2003  forge test
+ 2004  # Для ЛР2
+ 2005  cd ../lab2
+ 2006  forge test
+ 2007  # Для ЛР1
+ 2008  cd lab1
+ 2009  forge test --offline
+ 2010  # Для ЛР2
+ 2011  cd ../lab2
+ 2012  forge test --offline
+ 2013  ls -la
+ 2014  cd ..
+ 2015  # Для ЛР1
+ 2016  cd lab1
+ 2017  forge test --offline
+ 2018  # Для ЛР2
+ 2019  cd ../lab2
+ 2020  forge test --offline
+ 2021  ls lab2/test
+ 2022  mv test/* lab2/test/
+ 2023  cd ..
+ 2024  # Создайте папку test в lab2
+ 2025  mkdir -p lab2/test
+ 2026  # Если у вас есть резервная копия тестов, скопируйте их:
+ 2027  cp -r path/to/your/tests/* lab2/test/
+ 2028  # ИЛИ создайте базовый тест для проверки
+ 2029  cat > lab2/test/SmokeTest.t.sol <<EOL
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
+
+import "forge-std/Test.sol";
+
+contract SmokeTest is Test {
+    function test_Smoke() public {
+        assertTrue(true);
+    }
+}
+EOL
+
+ 2030  # Создайте папку test в lab2
+ 2031  mkdir -p lab2/test
+ 2032  # ИЛИ создайте базовый тест для проверки
+ 2033  cat > lab2/test/SmokeTest.t.sol <<EOL
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
+
+import "forge-std/Test.sol";
+
+contract SmokeTest is Test {
+    function test_Smoke() public {
+        assertTrue(true);
+    }
+}
+EOL
+
+ 2034  # Создайте недостающие папки
+ 2035  mkdir -p lab2/src lab2/script
+ 2036  # Если у вас есть исходные файлы, переместите их:
+ 2037  mv src/* lab2/src/
+ 2038  mv script/* lab2/script/
+ 2039  ls -la
+ 2040  ls lab1/src lab1/test lab1/script
+ 2041  ls lab2/src lab2/test lab2/script
+ 2042  cd lab2
+ 2043  # Инициализируйте Foundry проект
+ 2044  forge init --force --no-commit
+ 2045  # Установите зависимости
+ 2046  forge install foundry-rs/forge-std
+ 2047  forge install OpenZeppelin/openzeppelin-contracts
+ 2048  # Обновите remappings
+ 2049  forge remappings > remappings.txt
+ 2050  # Настройте foundry.toml
+ 2051  cat > foundry.toml <<EOL
+[profile.default]
+src = 'src'
+out = 'out'
+libs = ['lib']
+EOL
+
+ 2052  # Перейдите в папку lab2
+ 2053  cd lab2
+ 2054  # Соберите проект
+ 2055  forge build
+ 2056  # Запустите тесты
+ 2057  forge test --offline
+ 2058  cd ..
+ 2059  # Перейдите в папку lab2
+ 2060  cd lab2
+ 2061  # Соберите проект
+ 2062  forge build
+ 2063  # Запустите тесты
+ 2064  forge test --offline
+ 2065  cd ..
+ 2066  cd lab2
+ 2067  # Создайте правильный файл ремаппингов
+ 2068  cat > remappings.txt <<EOL
+@openzeppelin/=lib/openzeppelin-contracts/
+forge-std/=lib/forge-std/src/
+EOL
+
+ 2069  ls lib/openzeppelin-contracts/contracts
+ 2070  cat > foundry.toml <<EOL
+[profile.default]
+src = 'src'
+out = 'out'
+libs = ['lib']
+fs_permissions = [{ access = "read", path = "./"}]
+
+[fmt]
+line_length = 120
+EOL
+
+ 2071  # Удалите текущие зависимости
+ 2072  rm -rf lib
+ 2073  # Переустановите
+ 2074  forge install foundry-rs/forge-std
+ 2075  forge install OpenZeppelin/openzeppelin-contracts@v5.0.0
+ 2076  # Обновите ремаппинги
+ 2077  forge remappings > remappings.txt
+ 2078  # Удалите текущие зависимости
+ 2079  rm -rf lib
+ 2080  # Переустановите
+ 2081  forge install foundry-rs/forge-std
+ 2082  forge install OpenZeppelin/openzeppelin-contracts@v5.4.0
+ 2083  # Обновите ремаппинги
+ 2084  forge remappings > remappings.txt
+ 2085  cat remappings.txt
+ 2086  forge clean
+ 2087  forge build --offline
+ 2088  forge test --offline
+ 2089  forge clean
+ 2090  forge build 
+ 2091  forge build --offline
+ 2092  history >h2.txt

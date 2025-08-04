@@ -1,6 +1,7 @@
 # EDUChain Project
 
 ## Лабораторные работы
+- [ЛР10:](./lab10/README.md)
 - [ЛР9:](./lab9/README.md)
 - [ЛР8:](./lab8/README.md)
 - [ЛР7:  Автоматизация API-тестирования](./lab7/README.md)
