@@ -1,0 +1,22 @@
+FROM alpine:latest
+
+# Копируем локальный архив IPFS
+COPY ipfs-download/ipfs.tar.gz /ipfs.tar.gz
+
+# Устанавливаем IPFS
+RUN apk add --no-cache tar
+RUN tar -xzf /ipfs.tar.gz
+RUN mv /go-ipfs/ipfs /usr/local/bin/ipfs
+RUN rm /ipfs.tar.gz
+
+# Настройка IPFS
+RUN mkdir -p /data/ipfs /export
+RUN ipfs init
+RUN ipfs config --json Addresses.API '"/ip4/0.0.0.0/tcp/5001"'
+RUN ipfs config --json Addresses.Gateway '"/ip4/0.0.0.0/tcp/8080"'
+
+VOLUME /data/ipfs
+VOLUME /export
+
+EXPOSE 4001 5001 8080
+ENTRYPOINT ["ipfs", "daemon", "--migrate=true", "--enable-gc"]

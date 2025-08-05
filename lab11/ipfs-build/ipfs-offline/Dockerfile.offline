@@ -1,0 +1,18 @@
+FROM scratch
+
+# Добавляем минимальную файловую систему
+COPY --from=busybox:latest / / 
+
+# Копируем IPFS (распакованный заранее)
+COPY kubo/ipfs /usr/local/bin/ipfs
+RUN chmod +x /usr/local/bin/ipfs
+
+# Создаем структуру директорий
+RUN mkdir -p /data/ipfs /export
+
+# Настройка
+VOLUME /data/ipfs /export
+EXPOSE 4001 5001 8080
+
+# Команда запуска
+ENTRYPOINT ["/usr/local/bin/ipfs", "daemon", "--init"]

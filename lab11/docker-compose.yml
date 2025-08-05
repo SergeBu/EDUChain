@@ -1,0 +1,91 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    ports: ["8081:8080"]
+    networks:
+      - backend_network
+    depends_on:
+      ipfs:
+        condition: service_healthy
+      anvil:
+        condition: service_started
+
+  ipfs:
+    image: ipfs/go-ipfs:v0.19.0
+    ports: 
+      - "5001:5001"
+      - "4001:4001"
+      - "8082:8080"
+    networks:
+      - backend_network
+    volumes:
+      - ipfs_data:/data/ipfs
+    healthcheck:
+      test: ["CMD", "ipfs", "swarm", "peers"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  anvil:
+    image: ghcr.io/foundry-rs/foundry:nightly
+    command: [
+      "anvil",
+      "--host", "0.0.0.0",
+      "--port", "8545",
+      "--http",
+      "--no-rate-limit",
+      "--silent"
+    ]
+    ports:
+      - "8545:8545"
+    networks:
+      - backend_network
+
+  mariadb:
+    image: bitnami/mariadb:10.11
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - MARIADB_DATABASE=bitnami_moodle
+      - MARIADB_USER=bn_moodle
+    volumes:
+      - mariadb_data:/bitnami/mariadb
+    networks:
+      - moodle_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  moodle:
+    image: bitnami/moodle:4.1.1  # Явно указываем версию    
+    ports: ["8080:8080"]
+    environment:
+      - MOODLE_DATABASE_HOST=mariadb
+      - MOODLE_DATABASE_PORT_NUMBER=3306
+      - MOODLE_DATABASE_USER=bn_moodle
+      - MOODLE_DATABASE_NAME=bitnami_moodle
+      - ALLOW_EMPTY_PASSWORD=yes
+      - MOODLE_DATABASE_PASSWORD=
+      - MOODLE_SKIP_BOOTSTRAP=no
+      - MOODLE_MODULES_TO_INSTALL=lti
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    volumes:
+      - moodle_data:/bitnami/moodle
+    networks:
+      - moodle_network
+
+volumes:
+  mariadb_data:
+  moodle_data:
+  ipfs_data:
+
+networks:
+  backend_network:
+    driver: bridge
+  moodle_network:
+    driver: bridge

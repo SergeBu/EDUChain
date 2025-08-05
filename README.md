@@ -1,6 +1,7 @@
 # EDUChain Project
 
 ## Лабораторные работы
+- [ЛР11:](./lab11/README.md)
 - [ЛР10:](./lab10/README.md)
 - [ЛР9:](./lab9/README.md)
 - [ЛР8:](./lab8/README.md)

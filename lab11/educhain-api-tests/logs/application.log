@@ -1,0 +1,542 @@
+2025-07-30T07:22:03.793+03:00  INFO 227836 --- [main] com.educhain.EduchainApplication         : Starting EduchainApplication using Java 21.0.7 with PID 227836 (/home/serge/blockchain-lab2/lab7/educhain-api-tests/target/classes started by serge in /home/serge/blockchain-lab2/lab7/educhain-api-tests)
+2025-07-30T07:22:03.800+03:00 DEBUG 227836 --- [main] com.educhain.EduchainApplication         : Running with Spring Boot v3.1.5, Spring v6.0.13
+2025-07-30T07:22:03.802+03:00  INFO 227836 --- [main] com.educhain.EduchainApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-07-30T07:22:04.981+03:00  INFO 227836 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-07-30T07:22:04.995+03:00  INFO 227836 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-30T07:22:04.996+03:00  INFO 227836 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-07-30T07:22:05.111+03:00  INFO 227836 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-30T07:22:05.111+03:00  INFO 227836 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1252 ms
+2025-07-30T07:22:05.579+03:00 DEBUG 227836 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2025-07-30T07:22:05.647+03:00 DEBUG 227836 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-07-30T07:22:05.676+03:00  INFO 227836 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@19e0dffe, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d4e13e1, org.springframework.security.web.context.SecurityContextHolderFilter@57c00115, org.springframework.security.web.header.HeaderWriterFilter@6ba060f3, org.springframework.security.web.authentication.logout.LogoutFilter@7c0777b5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1eff3cfb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fe533ff, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71b639d0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e0fbeb5, org.springframework.security.web.session.SessionManagementFilter@77bc2e16, org.springframework.security.web.access.ExceptionTranslationFilter@591a4f8e, org.springframework.security.web.access.intercept.AuthorizationFilter@6a0f2853]
+2025-07-30T07:22:05.738+03:00 DEBUG 227836 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-07-30T07:22:05.780+03:00 DEBUG 227836 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-07-30T07:22:05.889+03:00  INFO 227836 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-30T07:22:05.899+03:00  INFO 227836 --- [main] com.educhain.EduchainApplication         : Started EduchainApplication in 2.775 seconds (process running for 3.14)
+2025-07-30T07:22:17.028+03:00  INFO 227836 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-30T07:22:17.028+03:00  INFO 227836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-30T07:22:17.029+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-07-30T07:22:17.029+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-07-30T07:22:17.029+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-07-30T07:22:17.030+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6e1a3525
+2025-07-30T07:22:17.030+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@2d488c47
+2025-07-30T07:22:17.031+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-07-30T07:22:17.031+03:00  INFO 227836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-07-30T07:22:17.038+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-07-30T07:22:17.047+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.048+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 65A06E83DF98403445B91D050AF42819
+2025-07-30T07:22:17.062+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.educhain.controller.AuthController#login(LoginRequest)
+2025-07-30T07:22:17.063+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-07-30T07:22:17.069+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-07-30T07:22:17.074+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.075+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.076+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.079+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
+2025-07-30T07:22:17.083+03:00 DEBUG 227836 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /login
+2025-07-30T07:22:17.084+03:00 DEBUG 227836 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.084+03:00 DEBUG 227836 --- [http-nio-8080-exec-3] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 65A06E83DF98403445B91D050AF42819
+2025-07-30T07:22:17.085+03:00 DEBUG 227836 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /login
+2025-07-30T07:22:17.085+03:00 DEBUG 227836 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-07-30T07:22:17.086+03:00 DEBUG 227836 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.087+03:00 DEBUG 227836 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.087+03:00 DEBUG 227836 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.088+03:00 DEBUG 227836 --- [http-nio-8080-exec-3] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
+2025-07-30T07:22:17.091+03:00 DEBUG 227836 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /login
+2025-07-30T07:22:17.092+03:00 DEBUG 227836 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.092+03:00 DEBUG 227836 --- [http-nio-8080-exec-4] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 65A06E83DF98403445B91D050AF42819
+2025-07-30T07:22:17.092+03:00 DEBUG 227836 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /login
+2025-07-30T07:22:17.093+03:00 DEBUG 227836 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-07-30T07:22:17.094+03:00 DEBUG 227836 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.095+03:00 DEBUG 227836 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.095+03:00 DEBUG 227836 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.096+03:00 DEBUG 227836 --- [http-nio-8080-exec-4] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
+2025-07-30T07:22:17.098+03:00 DEBUG 227836 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /login
+2025-07-30T07:22:17.099+03:00 DEBUG 227836 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.099+03:00 DEBUG 227836 --- [http-nio-8080-exec-5] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 65A06E83DF98403445B91D050AF42819
+2025-07-30T07:22:17.099+03:00 DEBUG 227836 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /login
+2025-07-30T07:22:17.100+03:00 DEBUG 227836 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-07-30T07:22:17.100+03:00 DEBUG 227836 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.101+03:00 DEBUG 227836 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.102+03:00 DEBUG 227836 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.102+03:00 DEBUG 227836 --- [http-nio-8080-exec-5] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
+2025-07-30T07:22:17.105+03:00 DEBUG 227836 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /login
+2025-07-30T07:22:17.105+03:00 DEBUG 227836 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.106+03:00 DEBUG 227836 --- [http-nio-8080-exec-6] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 65A06E83DF98403445B91D050AF42819
+2025-07-30T07:22:17.106+03:00 DEBUG 227836 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /login
+2025-07-30T07:22:17.107+03:00 DEBUG 227836 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-07-30T07:22:17.107+03:00 DEBUG 227836 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.108+03:00 DEBUG 227836 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.108+03:00 DEBUG 227836 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.109+03:00 DEBUG 227836 --- [http-nio-8080-exec-6] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
+2025-07-30T07:22:17.112+03:00 DEBUG 227836 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /login
+2025-07-30T07:22:17.112+03:00 DEBUG 227836 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.112+03:00 DEBUG 227836 --- [http-nio-8080-exec-7] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 65A06E83DF98403445B91D050AF42819
+2025-07-30T07:22:17.113+03:00 DEBUG 227836 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /login
+2025-07-30T07:22:17.113+03:00 DEBUG 227836 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-07-30T07:22:17.114+03:00 DEBUG 227836 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.115+03:00 DEBUG 227836 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.115+03:00 DEBUG 227836 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.115+03:00 DEBUG 227836 --- [http-nio-8080-exec-7] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
+2025-07-30T07:22:17.118+03:00 DEBUG 227836 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /login
+2025-07-30T07:22:17.118+03:00 DEBUG 227836 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.118+03:00 DEBUG 227836 --- [http-nio-8080-exec-8] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 65A06E83DF98403445B91D050AF42819
+2025-07-30T07:22:17.118+03:00 DEBUG 227836 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /login
+2025-07-30T07:22:17.119+03:00 DEBUG 227836 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-07-30T07:22:17.120+03:00 DEBUG 227836 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.120+03:00 DEBUG 227836 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.121+03:00 DEBUG 227836 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.121+03:00 DEBUG 227836 --- [http-nio-8080-exec-8] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
+2025-07-30T07:22:17.124+03:00 DEBUG 227836 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /login
+2025-07-30T07:22:17.124+03:00 DEBUG 227836 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.125+03:00 DEBUG 227836 --- [http-nio-8080-exec-9] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 65A06E83DF98403445B91D050AF42819
+2025-07-30T07:22:17.125+03:00 DEBUG 227836 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /login
+2025-07-30T07:22:17.125+03:00 DEBUG 227836 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-07-30T07:22:17.126+03:00 DEBUG 227836 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.127+03:00 DEBUG 227836 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.128+03:00 DEBUG 227836 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.128+03:00 DEBUG 227836 --- [http-nio-8080-exec-9] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
+2025-07-30T07:22:17.131+03:00 DEBUG 227836 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /login
+2025-07-30T07:22:17.131+03:00 DEBUG 227836 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.131+03:00 DEBUG 227836 --- [http-nio-8080-exec-10] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 65A06E83DF98403445B91D050AF42819
+2025-07-30T07:22:17.132+03:00 DEBUG 227836 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /login
+2025-07-30T07:22:17.132+03:00 DEBUG 227836 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-07-30T07:22:17.133+03:00 DEBUG 227836 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.134+03:00 DEBUG 227836 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.134+03:00 DEBUG 227836 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.134+03:00 DEBUG 227836 --- [http-nio-8080-exec-10] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
+2025-07-30T07:22:17.137+03:00 DEBUG 227836 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /login
+2025-07-30T07:22:17.137+03:00 DEBUG 227836 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.137+03:00 DEBUG 227836 --- [http-nio-8080-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 65A06E83DF98403445B91D050AF42819
+2025-07-30T07:22:17.137+03:00 DEBUG 227836 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /login
+2025-07-30T07:22:17.138+03:00 DEBUG 227836 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-07-30T07:22:17.138+03:00 DEBUG 227836 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.139+03:00 DEBUG 227836 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.139+03:00 DEBUG 227836 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.140+03:00 DEBUG 227836 --- [http-nio-8080-exec-2] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
+2025-07-30T07:22:17.144+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /login
+2025-07-30T07:22:17.144+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.144+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 65A06E83DF98403445B91D050AF42819
+2025-07-30T07:22:17.144+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /login
+2025-07-30T07:22:17.145+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-07-30T07:22:17.146+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.146+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:22:17.146+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:22:17.147+03:00 DEBUG 227836 --- [http-nio-8080-exec-1] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
+2025-07-30T07:45:27.465+03:00  INFO 232907 --- [main] com.educhain.EduchainApplication         : Starting EduchainApplication using Java 21.0.7 with PID 232907 (/home/serge/blockchain-lab2/lab7/educhain-api-tests/target/classes started by serge in /home/serge/blockchain-lab2/lab7/educhain-api-tests)
+2025-07-30T07:45:27.466+03:00 DEBUG 232907 --- [main] com.educhain.EduchainApplication         : Running with Spring Boot v3.1.5, Spring v6.0.13
+2025-07-30T07:45:27.467+03:00  INFO 232907 --- [main] com.educhain.EduchainApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-07-30T07:45:28.246+03:00  INFO 232907 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-07-30T07:45:28.254+03:00  INFO 232907 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-30T07:45:28.254+03:00  INFO 232907 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-07-30T07:45:28.315+03:00  INFO 232907 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-30T07:45:28.316+03:00  INFO 232907 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 806 ms
+2025-07-30T07:45:28.364+03:00  WARN 232907 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController' defined in file [/home/serge/blockchain-lab2/lab7/educhain-api-tests/target/classes/com/educhain/controller/AuthController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.security.authentication.AuthenticationManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-07-30T07:45:28.366+03:00  INFO 232907 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-07-30T07:45:28.376+03:00  INFO 232907 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-30T07:45:28.391+03:00 ERROR 232907 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.educhain.controller.AuthController required a bean of type 'org.springframework.security.authentication.AuthenticationManager' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.authentication.AuthenticationManager' in your configuration.
+
+2025-07-30T07:49:22.487+03:00  INFO 233865 --- [main] com.educhain.EduchainApplication         : Starting EduchainApplication using Java 21.0.7 with PID 233865 (/home/serge/blockchain-lab2/lab7/educhain-api-tests/target/classes started by serge in /home/serge/blockchain-lab2/lab7/educhain-api-tests)
+2025-07-30T07:49:22.488+03:00 DEBUG 233865 --- [main] com.educhain.EduchainApplication         : Running with Spring Boot v3.1.5, Spring v6.0.13
+2025-07-30T07:49:22.489+03:00  INFO 233865 --- [main] com.educhain.EduchainApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-07-30T07:49:23.574+03:00  INFO 233865 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-07-30T07:49:23.587+03:00  INFO 233865 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-30T07:49:23.587+03:00  INFO 233865 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-07-30T07:49:23.688+03:00  INFO 233865 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-30T07:49:23.689+03:00  INFO 233865 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1153 ms
+2025-07-30T07:49:24.143+03:00 DEBUG 233865 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2025-07-30T07:49:24.208+03:00 DEBUG 233865 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-07-30T07:49:24.238+03:00  INFO 233865 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@40230eb9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b7aa898, org.springframework.security.web.context.SecurityContextHolderFilter@57545c3f, org.springframework.security.web.header.HeaderWriterFilter@27329d2a, org.springframework.security.web.authentication.logout.LogoutFilter@1ee27d73, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7930ffa9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36baa049, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@15f35bc3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@41b13f3d, org.springframework.security.web.session.SessionManagementFilter@2f894ad9, org.springframework.security.web.access.ExceptionTranslationFilter@7fb53256, org.springframework.security.web.access.intercept.AuthorizationFilter@47311277]
+2025-07-30T07:49:24.297+03:00 DEBUG 233865 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-07-30T07:49:24.336+03:00 DEBUG 233865 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-07-30T07:49:24.423+03:00  INFO 233865 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-30T07:49:24.433+03:00  INFO 233865 --- [main] com.educhain.EduchainApplication         : Started EduchainApplication in 2.396 seconds (process running for 2.724)
+2025-07-30T07:49:33.631+03:00  INFO 233865 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-30T07:49:33.631+03:00  INFO 233865 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-30T07:49:33.632+03:00 DEBUG 233865 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-07-30T07:49:33.632+03:00 DEBUG 233865 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-07-30T07:49:33.632+03:00 DEBUG 233865 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-07-30T07:49:33.633+03:00 DEBUG 233865 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5d6bf004
+2025-07-30T07:49:33.634+03:00 DEBUG 233865 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@28f80d8f
+2025-07-30T07:49:33.634+03:00 DEBUG 233865 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-07-30T07:49:33.635+03:00  INFO 233865 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-07-30T07:49:33.641+03:00 DEBUG 233865 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-07-30T07:49:33.650+03:00 DEBUG 233865 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:49:33.650+03:00 DEBUG 233865 --- [http-nio-8080-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 65A06E83DF98403445B91D050AF42819
+2025-07-30T07:49:33.661+03:00 DEBUG 233865 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.educhain.controller.AuthController#login(LoginRequest)
+2025-07-30T07:49:33.663+03:00 DEBUG 233865 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-07-30T07:49:33.668+03:00 DEBUG 233865 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-07-30T07:49:33.673+03:00 DEBUG 233865 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:49:33.674+03:00 DEBUG 233865 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:49:33.674+03:00 DEBUG 233865 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:49:33.690+03:00 DEBUG 233865 --- [http-nio-8080-exec-1] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/error?continue to session
+2025-07-30T07:53:59.935+03:00  INFO 234933 --- [main] com.educhain.EduchainApplication         : Starting EduchainApplication using Java 21.0.7 with PID 234933 (/home/serge/blockchain-lab2/lab7/educhain-api-tests/target/classes started by serge in /home/serge/blockchain-lab2/lab7/educhain-api-tests)
+2025-07-30T07:53:59.936+03:00 DEBUG 234933 --- [main] com.educhain.EduchainApplication         : Running with Spring Boot v3.1.5, Spring v6.0.13
+2025-07-30T07:53:59.937+03:00  INFO 234933 --- [main] com.educhain.EduchainApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-07-30T07:54:01.020+03:00  INFO 234933 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-07-30T07:54:01.032+03:00  INFO 234933 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-30T07:54:01.033+03:00  INFO 234933 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-07-30T07:54:01.118+03:00  INFO 234933 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-30T07:54:01.118+03:00  INFO 234933 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1131 ms
+2025-07-30T07:54:01.459+03:00 DEBUG 234933 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2025-07-30T07:54:01.508+03:00 DEBUG 234933 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-07-30T07:54:01.529+03:00  INFO 234933 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@717d7587, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e906375, org.springframework.security.web.context.SecurityContextHolderFilter@5afbd567, org.springframework.security.web.header.HeaderWriterFilter@7fb53256, org.springframework.security.web.authentication.logout.LogoutFilter@18a25bbd, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@56f730b2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@57545c3f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@34585ac9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@40230eb9, org.springframework.security.web.session.SessionManagementFilter@27329d2a, org.springframework.security.web.access.ExceptionTranslationFilter@3d90eeb3, org.springframework.security.web.access.intercept.AuthorizationFilter@316acbb5]
+2025-07-30T07:54:01.570+03:00 DEBUG 234933 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-07-30T07:54:01.595+03:00 DEBUG 234933 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-07-30T07:54:01.655+03:00  INFO 234933 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-30T07:54:01.661+03:00  INFO 234933 --- [main] com.educhain.EduchainApplication         : Started EduchainApplication in 2.194 seconds (process running for 2.557)
+2025-07-30T07:54:07.073+03:00  INFO 234933 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-30T07:54:07.073+03:00  INFO 234933 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-30T07:54:07.074+03:00 DEBUG 234933 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-07-30T07:54:07.074+03:00 DEBUG 234933 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-07-30T07:54:07.074+03:00 DEBUG 234933 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-07-30T07:54:07.075+03:00 DEBUG 234933 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4984ab2a
+2025-07-30T07:54:07.075+03:00 DEBUG 234933 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@709968b
+2025-07-30T07:54:07.076+03:00 DEBUG 234933 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-07-30T07:54:07.076+03:00  INFO 234933 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-30T07:54:07.083+03:00 DEBUG 234933 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-07-30T07:54:07.091+03:00 DEBUG 234933 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:54:07.091+03:00 DEBUG 234933 --- [http-nio-8080-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 62DBDA1A22ED59FECC831DBF074E0B3A
+2025-07-30T07:54:07.103+03:00 DEBUG 234933 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.educhain.controller.AuthController#login(LoginRequest)
+2025-07-30T07:54:07.104+03:00 DEBUG 234933 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-07-30T07:54:07.108+03:00 DEBUG 234933 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-07-30T07:54:07.112+03:00 DEBUG 234933 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:54:07.113+03:00 DEBUG 234933 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:54:07.113+03:00 DEBUG 234933 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:54:07.133+03:00 DEBUG 234933 --- [http-nio-8080-exec-1] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/error?continue to session
+2025-07-30T07:54:53.712+03:00  INFO 235257 --- [main] com.educhain.EduchainApplication         : Starting EduchainApplication using Java 21.0.7 with PID 235257 (/home/serge/blockchain-lab2/lab7/educhain-api-tests/target/classes started by serge in /home/serge/blockchain-lab2/lab7/educhain-api-tests)
+2025-07-30T07:54:53.713+03:00 DEBUG 235257 --- [main] com.educhain.EduchainApplication         : Running with Spring Boot v3.1.5, Spring v6.0.13
+2025-07-30T07:54:53.715+03:00  INFO 235257 --- [main] com.educhain.EduchainApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-07-30T07:54:54.779+03:00  INFO 235257 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-07-30T07:54:54.791+03:00  INFO 235257 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-30T07:54:54.792+03:00  INFO 235257 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-07-30T07:54:54.888+03:00  INFO 235257 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-30T07:54:54.889+03:00  INFO 235257 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1119 ms
+2025-07-30T07:54:55.330+03:00 DEBUG 235257 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2025-07-30T07:54:55.397+03:00 DEBUG 235257 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-07-30T07:54:55.424+03:00  INFO 235257 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3e906375, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40230eb9, org.springframework.security.web.context.SecurityContextHolderFilter@6993c8df, org.springframework.security.web.header.HeaderWriterFilter@1d6d1d42, org.springframework.security.web.authentication.logout.LogoutFilter@5d5b9ecb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@47311277, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@326e0b8e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@76a805b7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b7aa898, org.springframework.security.web.session.SessionManagementFilter@7978e022, org.springframework.security.web.access.ExceptionTranslationFilter@1db87583, org.springframework.security.web.access.intercept.AuthorizationFilter@56f730b2]
+2025-07-30T07:54:55.483+03:00 DEBUG 235257 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-07-30T07:54:55.520+03:00 DEBUG 235257 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-07-30T07:54:55.615+03:00  INFO 235257 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-30T07:54:55.625+03:00  INFO 235257 --- [main] com.educhain.EduchainApplication         : Started EduchainApplication in 2.422 seconds (process running for 2.779)
+2025-07-30T07:55:22.687+03:00  INFO 235257 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-30T07:55:22.687+03:00  INFO 235257 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-30T07:55:22.688+03:00 DEBUG 235257 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-07-30T07:55:22.688+03:00 DEBUG 235257 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-07-30T07:55:22.688+03:00 DEBUG 235257 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-07-30T07:55:22.690+03:00 DEBUG 235257 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@49ebf95d
+2025-07-30T07:55:22.690+03:00 DEBUG 235257 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5b0d99a4
+2025-07-30T07:55:22.691+03:00 DEBUG 235257 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-07-30T07:55:22.692+03:00  INFO 235257 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-07-30T07:55:22.700+03:00 DEBUG 235257 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-07-30T07:55:22.707+03:00 DEBUG 235257 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:55:22.708+03:00 DEBUG 235257 --- [http-nio-8080-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id F81749DE513125A4C42B2EE4E0E5BBBE
+2025-07-30T07:55:22.720+03:00 DEBUG 235257 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.educhain.controller.AuthController#login(LoginRequest)
+2025-07-30T07:55:22.721+03:00 DEBUG 235257 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-07-30T07:55:22.725+03:00 DEBUG 235257 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-07-30T07:55:22.730+03:00 DEBUG 235257 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:55:22.731+03:00 DEBUG 235257 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T07:55:22.732+03:00 DEBUG 235257 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T07:55:22.749+03:00 DEBUG 235257 --- [http-nio-8080-exec-1] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/error?continue to session
+2025-07-30T08:07:42.412+03:00  INFO 238269 --- [main] com.educhain.EduchainApplication         : Starting EduchainApplication using Java 21.0.7 with PID 238269 (/home/serge/blockchain-lab2/lab7/educhain-api-tests/target/classes started by serge in /home/serge/blockchain-lab2/lab7/educhain-api-tests)
+2025-07-30T08:07:42.414+03:00 DEBUG 238269 --- [main] com.educhain.EduchainApplication         : Running with Spring Boot v3.1.5, Spring v6.0.13
+2025-07-30T08:07:42.415+03:00  INFO 238269 --- [main] com.educhain.EduchainApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-07-30T08:07:43.554+03:00  INFO 238269 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-07-30T08:07:43.567+03:00  INFO 238269 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-30T08:07:43.568+03:00  INFO 238269 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-07-30T08:07:43.673+03:00  INFO 238269 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-30T08:07:43.674+03:00  INFO 238269 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1204 ms
+2025-07-30T08:07:44.128+03:00 DEBUG 238269 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2025-07-30T08:07:44.195+03:00 DEBUG 238269 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-07-30T08:07:44.220+03:00  INFO 238269 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@30839e44, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f174dd2, org.springframework.security.web.context.SecurityContextHolderFilter@46f902e0, org.springframework.security.web.header.HeaderWriterFilter@6b63e6ad, org.springframework.security.web.authentication.logout.LogoutFilter@13dbed9e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@361abd01, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12f49ca8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1945113f, org.springframework.security.web.session.SessionManagementFilter@6ee99964, org.springframework.security.web.access.ExceptionTranslationFilter@1f3b992, org.springframework.security.web.access.intercept.AuthorizationFilter@3c8a7e38]
+2025-07-30T08:07:44.282+03:00 DEBUG 238269 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-07-30T08:07:44.323+03:00 DEBUG 238269 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-07-30T08:07:44.413+03:00  INFO 238269 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-30T08:07:44.424+03:00  INFO 238269 --- [main] com.educhain.EduchainApplication         : Started EduchainApplication in 2.496 seconds (process running for 2.842)
+2025-07-30T08:07:52.424+03:00  INFO 238269 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-30T08:07:52.424+03:00  INFO 238269 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-30T08:07:52.424+03:00 DEBUG 238269 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-07-30T08:07:52.425+03:00 DEBUG 238269 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-07-30T08:07:52.425+03:00 DEBUG 238269 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-07-30T08:07:52.426+03:00 DEBUG 238269 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@72e733f1
+2025-07-30T08:07:52.426+03:00 DEBUG 238269 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@4b397e94
+2025-07-30T08:07:52.426+03:00 DEBUG 238269 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-07-30T08:07:52.426+03:00  INFO 238269 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-30T08:07:52.432+03:00 DEBUG 238269 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-07-30T08:07:52.440+03:00 DEBUG 238269 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:07:52.440+03:00 DEBUG 238269 --- [http-nio-8080-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id AAC614D2FC546033B05C56BCA4D0533A
+2025-07-30T08:07:52.450+03:00 DEBUG 238269 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.educhain.controller.AuthController#login(LoginRequest)
+2025-07-30T08:07:52.452+03:00 DEBUG 238269 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-07-30T08:07:52.457+03:00 DEBUG 238269 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-07-30T08:07:52.460+03:00 DEBUG 238269 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T08:07:52.460+03:00 DEBUG 238269 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:08:52.325+03:00 DEBUG 238269 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-07-30T08:08:52.326+03:00 DEBUG 238269 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:08:52.326+03:00 DEBUG 238269 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.educhain.controller.AuthController#login(LoginRequest)
+2025-07-30T08:08:52.327+03:00 DEBUG 238269 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-07-30T08:08:52.328+03:00 DEBUG 238269 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-07-30T08:08:52.329+03:00 DEBUG 238269 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T08:08:52.330+03:00 DEBUG 238269 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:22:45.325+03:00  INFO 241400 --- [main] com.educhain.EduchainApplication         : Starting EduchainApplication using Java 21.0.7 with PID 241400 (/home/serge/blockchain-lab2/lab7/educhain-api-tests/target/classes started by serge in /home/serge/blockchain-lab2/lab7/educhain-api-tests)
+2025-07-30T08:22:45.326+03:00 DEBUG 241400 --- [main] com.educhain.EduchainApplication         : Running with Spring Boot v3.1.5, Spring v6.0.13
+2025-07-30T08:22:45.327+03:00  INFO 241400 --- [main] com.educhain.EduchainApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-07-30T08:22:46.099+03:00  INFO 241400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-07-30T08:22:46.107+03:00  INFO 241400 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-30T08:22:46.108+03:00  INFO 241400 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-07-30T08:22:46.166+03:00  INFO 241400 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-30T08:22:46.167+03:00  INFO 241400 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 792 ms
+2025-07-30T08:22:46.416+03:00 DEBUG 241400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2025-07-30T08:22:46.456+03:00 DEBUG 241400 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-07-30T08:22:46.470+03:00  INFO 241400 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@64f981e2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@361abd01, org.springframework.security.web.context.SecurityContextHolderFilter@66f28a1f, org.springframework.security.web.header.HeaderWriterFilter@77c10a5f, org.springframework.security.web.authentication.logout.LogoutFilter@261db982, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44a085e5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4db60246, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@575b5f7d, org.springframework.security.web.session.SessionManagementFilter@3166f664, org.springframework.security.web.access.ExceptionTranslationFilter@66236a0a, org.springframework.security.web.access.intercept.AuthorizationFilter@257ef9ed]
+2025-07-30T08:22:46.512+03:00 DEBUG 241400 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-07-30T08:22:46.536+03:00 DEBUG 241400 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-07-30T08:22:46.592+03:00  INFO 241400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-30T08:22:46.599+03:00  INFO 241400 --- [main] com.educhain.EduchainApplication         : Started EduchainApplication in 1.682 seconds (process running for 2.013)
+2025-07-30T08:23:24.221+03:00  INFO 241400 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-30T08:23:24.222+03:00  INFO 241400 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-30T08:23:24.222+03:00 DEBUG 241400 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-07-30T08:23:24.223+03:00 DEBUG 241400 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-07-30T08:23:24.223+03:00 DEBUG 241400 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-07-30T08:23:24.224+03:00 DEBUG 241400 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@399b87c6
+2025-07-30T08:23:24.224+03:00 DEBUG 241400 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@255a8958
+2025-07-30T08:23:24.225+03:00 DEBUG 241400 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-07-30T08:23:24.225+03:00  INFO 241400 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-07-30T08:23:24.233+03:00 DEBUG 241400 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-07-30T08:23:24.241+03:00 DEBUG 241400 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:23:24.241+03:00 DEBUG 241400 --- [http-nio-8080-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id AAC614D2FC546033B05C56BCA4D0533A
+2025-07-30T08:23:24.254+03:00 DEBUG 241400 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.educhain.controller.AuthController#login(LoginRequest)
+2025-07-30T08:23:24.255+03:00 DEBUG 241400 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-07-30T08:23:24.260+03:00 DEBUG 241400 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-07-30T08:23:24.265+03:00 DEBUG 241400 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T08:23:24.266+03:00 DEBUG 241400 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:23:46.047+03:00 DEBUG 241400 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-07-30T08:23:46.048+03:00 DEBUG 241400 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:23:46.049+03:00 DEBUG 241400 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.educhain.controller.AuthController#login(LoginRequest)
+2025-07-30T08:23:46.049+03:00 DEBUG 241400 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-07-30T08:23:46.050+03:00 DEBUG 241400 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-07-30T08:23:46.051+03:00 DEBUG 241400 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T08:23:46.051+03:00 DEBUG 241400 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:28:39.500+03:00  INFO 242814 --- [main] com.educhain.EduchainApplication         : Starting EduchainApplication using Java 21.0.7 with PID 242814 (/home/serge/blockchain-lab2/lab7/educhain-api-tests/target/classes started by serge in /home/serge/blockchain-lab2/lab7/educhain-api-tests)
+2025-07-30T08:28:39.501+03:00 DEBUG 242814 --- [main] com.educhain.EduchainApplication         : Running with Spring Boot v3.1.5, Spring v6.0.13
+2025-07-30T08:28:39.502+03:00  INFO 242814 --- [main] com.educhain.EduchainApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-07-30T08:28:40.616+03:00  INFO 242814 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-07-30T08:28:40.628+03:00  INFO 242814 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-30T08:28:40.629+03:00  INFO 242814 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-07-30T08:28:40.731+03:00  INFO 242814 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-30T08:28:40.732+03:00  INFO 242814 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1176 ms
+2025-07-30T08:28:41.128+03:00 DEBUG 242814 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2025-07-30T08:28:41.182+03:00 DEBUG 242814 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-07-30T08:28:41.200+03:00  INFO 242814 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2b38b1f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d50a7ca, org.springframework.security.web.context.SecurityContextHolderFilter@ae73c80, org.springframework.security.web.header.HeaderWriterFilter@2806d6da, org.springframework.security.web.authentication.logout.LogoutFilter@40f35e52, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@bbd4791, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@17410c07, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51ab1ee3, org.springframework.security.web.session.SessionManagementFilter@6749fe50, org.springframework.security.web.access.ExceptionTranslationFilter@7c52fc81, org.springframework.security.web.access.intercept.AuthorizationFilter@493ac8d3]
+2025-07-30T08:28:41.244+03:00 DEBUG 242814 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-07-30T08:28:41.273+03:00 DEBUG 242814 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-07-30T08:28:41.341+03:00  INFO 242814 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-30T08:28:41.349+03:00  INFO 242814 --- [main] com.educhain.EduchainApplication         : Started EduchainApplication in 2.336 seconds (process running for 2.687)
+2025-07-30T08:29:09.745+03:00  INFO 242814 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-30T08:29:09.746+03:00  INFO 242814 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-30T08:29:09.746+03:00 DEBUG 242814 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-07-30T08:29:09.746+03:00 DEBUG 242814 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-07-30T08:29:09.746+03:00 DEBUG 242814 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-07-30T08:29:09.747+03:00 DEBUG 242814 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@51ac93c6
+2025-07-30T08:29:09.748+03:00 DEBUG 242814 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@2969fdcc
+2025-07-30T08:29:09.748+03:00 DEBUG 242814 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-07-30T08:29:09.748+03:00  INFO 242814 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-30T08:29:09.755+03:00 DEBUG 242814 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-07-30T08:29:09.762+03:00 DEBUG 242814 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:29:09.763+03:00 DEBUG 242814 --- [http-nio-8080-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id AAC614D2FC546033B05C56BCA4D0533A
+2025-07-30T08:29:09.773+03:00 DEBUG 242814 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.educhain.controller.AuthController#login(LoginRequest)
+2025-07-30T08:29:09.774+03:00 DEBUG 242814 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-07-30T08:29:09.779+03:00 DEBUG 242814 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-07-30T08:29:09.783+03:00 DEBUG 242814 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T08:29:09.784+03:00 DEBUG 242814 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:29:28.823+03:00 DEBUG 242814 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-07-30T08:29:28.823+03:00 DEBUG 242814 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:29:28.824+03:00 DEBUG 242814 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.educhain.controller.AuthController#login(LoginRequest)
+2025-07-30T08:29:28.824+03:00 DEBUG 242814 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-07-30T08:29:28.825+03:00 DEBUG 242814 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-07-30T08:29:28.826+03:00 DEBUG 242814 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T08:29:28.826+03:00 DEBUG 242814 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:38:40.392+03:00  INFO 245102 --- [main] com.educhain.EduchainApplication         : Starting EduchainApplication using Java 21.0.7 with PID 245102 (/home/serge/blockchain-lab2/lab7/educhain-api-tests/target/classes started by serge in /home/serge/blockchain-lab2/lab7/educhain-api-tests)
+2025-07-30T08:38:40.393+03:00 DEBUG 245102 --- [main] com.educhain.EduchainApplication         : Running with Spring Boot v3.1.5, Spring v6.0.13
+2025-07-30T08:38:40.394+03:00  INFO 245102 --- [main] com.educhain.EduchainApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-07-30T08:38:41.081+03:00  INFO 245102 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-07-30T08:38:41.089+03:00  INFO 245102 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-30T08:38:41.089+03:00  INFO 245102 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-07-30T08:38:41.147+03:00  INFO 245102 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-30T08:38:41.148+03:00  INFO 245102 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 717 ms
+2025-07-30T08:38:41.404+03:00 DEBUG 245102 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2025-07-30T08:38:41.445+03:00 DEBUG 245102 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-07-30T08:38:41.459+03:00  INFO 245102 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@10a98392, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30839e44, org.springframework.security.web.context.SecurityContextHolderFilter@59c70ceb, org.springframework.security.web.header.HeaderWriterFilter@2a53f215, org.springframework.security.web.authentication.logout.LogoutFilter@493ac8d3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64f981e2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7165d530, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f174dd2, org.springframework.security.web.session.SessionManagementFilter@17410c07, org.springframework.security.web.access.ExceptionTranslationFilter@cb39552, org.springframework.security.web.access.intercept.AuthorizationFilter@21a02556]
+2025-07-30T08:38:41.492+03:00 DEBUG 245102 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-07-30T08:38:41.514+03:00 DEBUG 245102 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-07-30T08:38:41.574+03:00  INFO 245102 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-30T08:38:41.579+03:00  INFO 245102 --- [main] com.educhain.EduchainApplication         : Started EduchainApplication in 1.508 seconds (process running for 1.758)
+2025-07-30T08:39:21.985+03:00  INFO 245102 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-30T08:39:21.985+03:00  INFO 245102 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-30T08:39:21.985+03:00 DEBUG 245102 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-07-30T08:39:21.986+03:00 DEBUG 245102 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-07-30T08:39:21.986+03:00 DEBUG 245102 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-07-30T08:39:21.987+03:00 DEBUG 245102 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1c335b1f
+2025-07-30T08:39:21.987+03:00 DEBUG 245102 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5a6be9f4
+2025-07-30T08:39:21.987+03:00 DEBUG 245102 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-07-30T08:39:21.987+03:00  INFO 245102 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-30T08:39:21.995+03:00 DEBUG 245102 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-07-30T08:39:22.001+03:00 DEBUG 245102 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:39:22.011+03:00 DEBUG 245102 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.educhain.controller.AuthController#login(LoginRequest)
+2025-07-30T08:39:22.012+03:00 DEBUG 245102 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-07-30T08:39:22.018+03:00 DEBUG 245102 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-07-30T08:39:22.021+03:00 DEBUG 245102 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T08:39:22.022+03:00 DEBUG 245102 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:41:46.526+03:00 DEBUG 245102 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-07-30T08:41:46.526+03:00 DEBUG 245102 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:41:46.526+03:00 DEBUG 245102 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.educhain.controller.AuthController#login(LoginRequest)
+2025-07-30T08:41:46.527+03:00 DEBUG 245102 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-07-30T08:41:46.527+03:00 DEBUG 245102 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-07-30T08:41:46.528+03:00 DEBUG 245102 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T08:41:46.528+03:00 DEBUG 245102 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:46:19.767+03:00  INFO 246862 --- [main] com.educhain.EduchainApplication         : Starting EduchainApplication using Java 21.0.7 with PID 246862 (/home/serge/blockchain-lab2/lab7/educhain-api-tests/target/classes started by serge in /home/serge/blockchain-lab2/lab7/educhain-api-tests)
+2025-07-30T08:46:19.768+03:00 DEBUG 246862 --- [main] com.educhain.EduchainApplication         : Running with Spring Boot v3.1.5, Spring v6.0.13
+2025-07-30T08:46:19.769+03:00  INFO 246862 --- [main] com.educhain.EduchainApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-07-30T08:46:20.818+03:00  INFO 246862 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-07-30T08:46:20.831+03:00  INFO 246862 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-30T08:46:20.831+03:00  INFO 246862 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-07-30T08:46:20.928+03:00  INFO 246862 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-30T08:46:20.929+03:00  INFO 246862 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1109 ms
+2025-07-30T08:46:21.377+03:00 DEBUG 246862 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2025-07-30T08:46:21.446+03:00 DEBUG 246862 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-07-30T08:46:21.469+03:00  INFO 246862 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@67531e3a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b38b1f, org.springframework.security.web.context.SecurityContextHolderFilter@261db982, org.springframework.security.web.header.HeaderWriterFilter@7523a3dc, org.springframework.security.web.authentication.logout.LogoutFilter@480b57e2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22f4f8f2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@76a14c8d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d50a7ca, org.springframework.security.web.session.SessionManagementFilter@7beae796, org.springframework.security.web.access.ExceptionTranslationFilter@62b790a5, org.springframework.security.web.access.intercept.AuthorizationFilter@59a79443]
+2025-07-30T08:46:21.525+03:00 DEBUG 246862 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-07-30T08:46:21.564+03:00 DEBUG 246862 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-07-30T08:46:21.664+03:00  INFO 246862 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-30T08:46:21.675+03:00  INFO 246862 --- [main] com.educhain.EduchainApplication         : Started EduchainApplication in 2.375 seconds (process running for 2.738)
+2025-07-30T08:46:35.524+03:00  INFO 246862 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-30T08:46:35.524+03:00  INFO 246862 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-30T08:46:35.525+03:00 DEBUG 246862 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-07-30T08:46:35.525+03:00 DEBUG 246862 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-07-30T08:46:35.525+03:00 DEBUG 246862 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-07-30T08:46:35.526+03:00 DEBUG 246862 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@419acda6
+2025-07-30T08:46:35.526+03:00 DEBUG 246862 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@7e4dcabe
+2025-07-30T08:46:35.527+03:00 DEBUG 246862 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-07-30T08:46:35.527+03:00  INFO 246862 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-07-30T08:46:35.534+03:00 DEBUG 246862 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-07-30T08:46:35.542+03:00 DEBUG 246862 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:46:35.552+03:00 DEBUG 246862 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.educhain.controller.AuthController#login(LoginRequest)
+2025-07-30T08:46:35.553+03:00 DEBUG 246862 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-07-30T08:46:35.559+03:00 DEBUG 246862 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-07-30T08:46:35.563+03:00 DEBUG 246862 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T08:46:35.564+03:00 DEBUG 246862 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:46:35.565+03:00 DEBUG 246862 --- [http-nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-07-30T08:46:58.460+03:00 DEBUG 246862 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-07-30T08:46:58.460+03:00 DEBUG 246862 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:46:58.460+03:00 DEBUG 246862 --- [http-nio-8080-exec-3] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id AAC614D2FC546033B05C56BCA4D0533A
+2025-07-30T08:46:58.461+03:00 DEBUG 246862 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.educhain.controller.AuthController#login(LoginRequest)
+2025-07-30T08:46:58.461+03:00 DEBUG 246862 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-07-30T08:46:58.462+03:00 DEBUG 246862 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-07-30T08:46:58.463+03:00 DEBUG 246862 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T08:46:58.464+03:00 DEBUG 246862 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:46:58.464+03:00 DEBUG 246862 --- [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-07-30T08:57:06.698+03:00  INFO 249118 --- [main] com.educhain.EduchainApplication         : Starting EduchainApplication using Java 21.0.7 with PID 249118 (/home/serge/blockchain-lab2/lab7/educhain-api-tests/target/classes started by serge in /home/serge/blockchain-lab2/lab7/educhain-api-tests)
+2025-07-30T08:57:06.700+03:00 DEBUG 249118 --- [main] com.educhain.EduchainApplication         : Running with Spring Boot v3.1.5, Spring v6.0.13
+2025-07-30T08:57:06.701+03:00  INFO 249118 --- [main] com.educhain.EduchainApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-07-30T08:57:07.763+03:00  INFO 249118 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-07-30T08:57:07.776+03:00  INFO 249118 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-30T08:57:07.777+03:00  INFO 249118 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-07-30T08:57:07.876+03:00  INFO 249118 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-30T08:57:07.877+03:00  INFO 249118 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1122 ms
+2025-07-30T08:57:08.333+03:00 DEBUG 249118 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2025-07-30T08:57:08.403+03:00 DEBUG 249118 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-07-30T08:57:08.429+03:00  INFO 249118 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5dc0ff7d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64920dc2, org.springframework.security.web.context.SecurityContextHolderFilter@2a53f215, org.springframework.security.web.header.HeaderWriterFilter@3ce443f9, org.springframework.security.web.authentication.logout.LogoutFilter@673c4f6e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7beae796, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ae73c80, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59a79443, org.springframework.security.web.session.SessionManagementFilter@6a756082, org.springframework.security.web.access.ExceptionTranslationFilter@2935fd2c, org.springframework.security.web.access.intercept.AuthorizationFilter@443faa85]
+2025-07-30T08:57:08.493+03:00 DEBUG 249118 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-07-30T08:57:08.535+03:00 DEBUG 249118 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-07-30T08:57:08.633+03:00  INFO 249118 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-30T08:57:08.643+03:00  INFO 249118 --- [main] com.educhain.EduchainApplication         : Started EduchainApplication in 2.424 seconds (process running for 2.775)
+2025-07-30T08:57:35.119+03:00  INFO 249118 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-30T08:57:35.120+03:00  INFO 249118 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-30T08:57:35.120+03:00 DEBUG 249118 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-07-30T08:57:35.120+03:00 DEBUG 249118 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-07-30T08:57:35.121+03:00 DEBUG 249118 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-07-30T08:57:35.121+03:00 DEBUG 249118 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7e2af9d3
+2025-07-30T08:57:35.122+03:00 DEBUG 249118 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@46d5ac54
+2025-07-30T08:57:35.122+03:00 DEBUG 249118 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-07-30T08:57:35.122+03:00  INFO 249118 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-30T08:57:35.129+03:00 DEBUG 249118 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-07-30T08:57:35.137+03:00 DEBUG 249118 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:57:35.146+03:00 DEBUG 249118 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.educhain.controller.AuthController#login(LoginRequest)
+2025-07-30T08:57:35.147+03:00 DEBUG 249118 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-07-30T08:57:35.152+03:00 DEBUG 249118 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-07-30T08:57:35.156+03:00 DEBUG 249118 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T08:57:35.156+03:00 DEBUG 249118 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:58:23.953+03:00 DEBUG 249118 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-07-30T08:58:23.954+03:00 DEBUG 249118 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T08:58:23.954+03:00 DEBUG 249118 --- [http-nio-8080-exec-3] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id AAC614D2FC546033B05C56BCA4D0533A
+2025-07-30T08:58:23.955+03:00 DEBUG 249118 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.educhain.controller.AuthController#login(LoginRequest)
+2025-07-30T08:58:23.955+03:00 DEBUG 249118 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-07-30T08:58:23.956+03:00 DEBUG 249118 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-07-30T08:58:23.956+03:00 DEBUG 249118 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T08:58:23.957+03:00 DEBUG 249118 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T13:42:20.791+03:00  INFO 260099 --- [main] com.educhain.EduchainApplication         : Starting EduchainApplication using Java 21.0.7 with PID 260099 (/home/serge/blockchain-lab2/lab7/educhain-api-tests/target/classes started by serge in /home/serge/blockchain-lab2/lab7/educhain-api-tests)
+2025-07-30T13:42:20.792+03:00 DEBUG 260099 --- [main] com.educhain.EduchainApplication         : Running with Spring Boot v3.1.5, Spring v6.0.13
+2025-07-30T13:42:20.793+03:00  INFO 260099 --- [main] com.educhain.EduchainApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-07-30T13:42:21.551+03:00  INFO 260099 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-07-30T13:42:21.560+03:00  INFO 260099 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-30T13:42:21.560+03:00  INFO 260099 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2025-07-30T13:42:21.627+03:00  INFO 260099 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-30T13:42:21.628+03:00  INFO 260099 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 802 ms
+2025-07-30T13:42:21.902+03:00 DEBUG 260099 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2025-07-30T13:42:21.948+03:00 DEBUG 260099 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-07-30T13:42:21.966+03:00  INFO 260099 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1d50a7ca, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51ab1ee3, org.springframework.security.web.context.SecurityContextHolderFilter@261db982, org.springframework.security.web.header.HeaderWriterFilter@7523a3dc, org.springframework.web.filter.CorsFilter@2e766822, org.springframework.security.web.authentication.logout.LogoutFilter@480b57e2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22f4f8f2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@76a14c8d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3003e580, org.springframework.security.web.session.SessionManagementFilter@7beae796, org.springframework.security.web.access.ExceptionTranslationFilter@62b790a5, org.springframework.security.web.access.intercept.AuthorizationFilter@13dbed9e]
+2025-07-30T13:42:22.016+03:00 DEBUG 260099 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-07-30T13:42:22.047+03:00 DEBUG 260099 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-07-30T13:42:22.110+03:00  INFO 260099 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-07-30T13:42:22.116+03:00  INFO 260099 --- [main] com.educhain.EduchainApplication         : Started EduchainApplication in 1.641 seconds (process running for 1.86)
+2025-07-30T13:42:31.703+03:00  INFO 260099 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-30T13:42:31.703+03:00  INFO 260099 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-30T13:42:31.703+03:00 DEBUG 260099 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-07-30T13:42:31.703+03:00 DEBUG 260099 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-07-30T13:42:31.703+03:00 DEBUG 260099 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-07-30T13:42:31.704+03:00 DEBUG 260099 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1a43f417
+2025-07-30T13:42:31.704+03:00 DEBUG 260099 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@635b0909
+2025-07-30T13:42:31.704+03:00 DEBUG 260099 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-07-30T13:42:31.705+03:00  INFO 260099 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-07-30T13:42:31.709+03:00 DEBUG 260099 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-07-30T13:42:31.714+03:00 DEBUG 260099 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T13:42:31.720+03:00 DEBUG 260099 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.educhain.controller.AuthController#login(LoginRequest)
+2025-07-30T13:42:31.721+03:00 DEBUG 260099 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-07-30T13:42:31.724+03:00 DEBUG 260099 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-07-30T13:42:31.726+03:00 DEBUG 260099 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T13:42:31.726+03:00 DEBUG 260099 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T13:42:40.939+03:00 DEBUG 260099 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-07-30T13:42:40.940+03:00 DEBUG 260099 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T13:42:40.940+03:00 DEBUG 260099 --- [http-nio-8080-exec-3] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id AAC614D2FC546033B05C56BCA4D0533A
+2025-07-30T13:42:40.940+03:00 DEBUG 260099 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.educhain.controller.AuthController#login(LoginRequest)
+2025-07-30T13:42:40.940+03:00 DEBUG 260099 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-07-30T13:42:40.941+03:00 DEBUG 260099 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-07-30T13:42:40.941+03:00 DEBUG 260099 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T13:42:40.942+03:00 DEBUG 260099 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T14:02:18.606+03:00 DEBUG 260099 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-07-30T14:02:18.607+03:00 DEBUG 260099 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T14:02:18.608+03:00 DEBUG 260099 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.educhain.controller.AuthController#login(LoginRequest)
+2025-07-30T14:02:18.608+03:00 DEBUG 260099 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-07-30T14:02:18.608+03:00 DEBUG 260099 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-07-30T14:02:18.609+03:00 DEBUG 260099 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T14:02:18.609+03:00 DEBUG 260099 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T14:03:02.001+03:00 DEBUG 260099 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-07-30T14:03:02.001+03:00 DEBUG 260099 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-07-30T14:03:02.001+03:00 DEBUG 260099 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.educhain.controller.AuthController#login(LoginRequest)
+2025-07-30T14:03:02.002+03:00 DEBUG 260099 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2025-07-30T14:03:02.002+03:00 DEBUG 260099 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-07-30T14:03:02.002+03:00 DEBUG 260099 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-07-30T14:03:02.002+03:00 DEBUG 260099 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext

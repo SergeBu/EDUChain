@@ -1,0 +1,12 @@
+/home/serge/blockchain-lab2/lab9/educhain-api-tests2/src/main/java/com/educhain/controller/NftController.java
+/home/serge/blockchain-lab2/lab9/educhain-api-tests2/src/main/java/com/educhain/controller/HealthController.java
+/home/serge/blockchain-lab2/lab9/educhain-api-tests2/src/main/java/com/educhain/dto/NftResponse.java
+/home/serge/blockchain-lab2/lab9/educhain-api-tests2/src/main/java/com/educhain/controller/AuthController.java
+/home/serge/blockchain-lab2/lab9/educhain-api-tests2/src/main/java/com/educhain/dto/NftRequest.java
+/home/serge/blockchain-lab2/lab9/educhain-api-tests2/src/main/java/com/educhain/controller/MainController.java
+/home/serge/blockchain-lab2/lab9/educhain-api-tests2/src/main/java/com/educhain/controller/BalanceController.java
+/home/serge/blockchain-lab2/lab9/educhain-api-tests2/src/main/java/com/educhain/EduchainApplication.java
+/home/serge/blockchain-lab2/lab9/educhain-api-tests2/src/main/java/com/educhain/service/NftService.java
+/home/serge/blockchain-lab2/lab9/educhain-api-tests2/src/main/java/com/educhain/dto/LoginRequest.java
+/home/serge/blockchain-lab2/lab9/educhain-api-tests2/src/main/java/com/educhain/controller/LoginController.java
+/home/serge/blockchain-lab2/lab9/educhain-api-tests2/src/main/java/com/educhain/config/SecurityConfig.java
